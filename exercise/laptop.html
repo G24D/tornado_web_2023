@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-200 bg-no-repeat bg-cover px-20">
+
+    <!-- bg-[url('/img/laptopbg.jpeg')] -->
+        
+        <nav class="flex justify-between items-center h-20 mb-[200px] text-3xl">
+            <div class="flex">
+                <img src="/svg/Aagii Aagii - three_dots.svg" alt="">        
+                <a href="#" style="width: 200px;">Three Dots</a>
+            </div>
+            <div class="flex gap-40 text-gray-400">
+                <a href="#specs">Specs</a>
+                <a href="#Products">Products</a>
+                <a href="Contacts">Contacts</a>
+            </div>
+            <div>
+                <button><img src="/svg/cart-svgrepo-com.svg" alt="" width="32px" class="p-2 bg-gray-300 rounded-full"></button>
+            </div>
+        </nav>
+        <main class="flex justify-between">
+            <section class="w-[45%]">
+                <h1 class="font-bold text-[66px] text-gray-600">Laptop for the future</h1> <br>
+                <p class="text-gray-900 text-4xl  bg-gray-200 first-letter:text-8xl first-letter:-top-80">The new 14 inch bezeless display offerring <br> a 4k display with touch screen.</p> <br>  <br> 
+                <div class="flex gap-20">
+                    <button class="w-40 h-16 border-pink-500 border-4">14 Inch</button>
+                    
+                    <button class="w-40 h-16 border-pink-500 border-4 bg-pink-500 text-white">Add to Cart</button>
+                </div>
+            </section>
+            <section class="w-[45%]">
+                <div class="flex" id="mySlides">
+                    
+                    <img src="/img/matebook.png" width="620px" alt="" class="bg-gray-200" id="pic1">
+                    <img src="/img/laptop2.jpeg" width="620px" alt="" class="bg-gray-200 hidden" id="pic2">
+                    <img src="/img/laptop3.webp" width="620px" alt="" class="bg-gray-200 hidden" id="pic3">
+                   
+                </div>
+                <div class="flex items-center justify-center">
+                    <a href="#" id="prev" onclick="plusSlides(-1)"><img src="/svg/arrow-circle-left-svgrepo-com.svg" width="40px" alt=""></a>
+                    <a href="#"><img src="/svg/circle-svgrepo-com.svg" width="40px" alt=""></a>
+                    <a href="#"><img src="/svg//circle-filled-svgrepo-com.svg" width="40px" alt="" ></a>
+                    <a href="#"><img src="/svg/circle-filled-svgrepo-com.svg" width="40px" alt="" ></a>
+                    <a href="#" id="next" onclick="plusSlides(-1)"><img src="/svg/arrow-circle-right-svgrepo-com.svg" width="40px" alt=""></a>
+                </div>
+            </section>
+           
+        </main>
+
+</body>
+<script src="./laptop.js"></script>
+</html>
