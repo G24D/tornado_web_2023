@@ -372,3 +372,14 @@ section-products h1 {
     font-size: 24px;
   }
 
+section-team {
+    width: 800px;
+    display: grid;
+    place-items: center;
+}
+
+section-team h1 {
+    align-items: center;
+    position: relative;
+    padding: 20px 0 10px 0; 
+}

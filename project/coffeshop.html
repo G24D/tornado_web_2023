@@ -225,6 +225,14 @@
                 </div>
             </div>
         </section-products>
+        <section-team>
+            <h1 class="be4after">Our Team</h1>
+            <div class="team-card-container">
+                <div class="team-card">
+
+                </div>
+            </div>
+        </section-team>    
     </div>
 </body>
 <script>
@@ -257,37 +265,43 @@
         },
         {
             image: "/img/Product-2 1.jpg",
-            title: 'title 2',
+            title: 'Cappuchino',
             price: '$12.00',
             priceBefore: '$15'
         },
         {
             image: "/img/Product-3 1.jpg",
-            title: 'title3',
+            title: 'Doughnut',
             price: '$12.00',
             priceBefore: '$15'
         },
         {
             image: "/img/Product-4 1.jpg",
-            title: 'title3',
+            title: 'Latte',
             price: '$12.00',
             priceBefore: '$15'
         },
         {
             image: "/img/Product-5 1.jpg",
-            title: 'title3',
+            title: 'Chocolate cake',
             price: '$12.00',
             priceBefore: '$15'
         },
         {
             image: "/img/Product-6 1.jpg",
-            title: 'title3',
+            title: 'Hot chocolate',
             price: '$12.00',
             priceBefore: '$15'
         },
         {
             image: "/img/Product-7 1.jpg",
-            title: 'title3',
+            title: 'Croissant',
+            price: '$12.00',
+            priceBefore: '$15'
+        },
+        {
+            image: "/img/Product-8 1.jpg",
+            title: 'Green tea',
             price: '$12.00',
             priceBefore: '$15'
         },
@@ -314,9 +328,17 @@
     }
     postMethods();
 
-  
+  const postTeam = () => {
+    teamCards.forEach((teamCard) => {
+        const postTeamElement = document.createElement('div');
+        postTeamElement.classList.add('team-card');
+        postTeamElement.innerHTML = `
+        <img src="${teamCard.img} width="250px"
+        <h3>${teamCard.}
+        `;
 
-
+    })
+  }
                         
 </script>
 
