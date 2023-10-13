@@ -2,10 +2,8 @@
     box-sizing: border-box;
 }
 body {
-    height: 8000px;
-
     background-color: #f0e9e9;
-
+    height: 8000px;
 }
 #icoffeeshop {
     display: grid;
@@ -324,7 +322,6 @@ section-products {
 }
 
 section-products h1 {
-    width: 800px;
     align-items: center;
     position: relative;
     padding: 20px 0 10px 0; 
@@ -383,3 +380,65 @@ section-team h1 {
     position: relative;
     padding: 20px 0 10px 0; 
 }
+
+div.team-card-container {
+    display: flex;
+    justify-content: center;
+    width: 800px;
+}
+.team-card {
+    width: 250px;
+    height: fit-content;
+    margin: 10px;
+    text-align: center;
+    font-size: 24px;
+  }
+
+section-blogs {
+    width: 800px;
+    display: grid;
+    place-items: center;
+}
+
+section-blogs h1 {
+    align-items: center;
+    position: relative;
+    padding: 20px 0 10px 0; 
+}
+
+.be4after::after {
+    /* border-bottom: 2px #603601 solid; */
+    position: absolute;
+    width: 60px;
+    bottom: 0;
+    left: 50px;
+    background: #caa980;
+    content: "";
+    height: 2px;
+    justify-items: center;
+}
+
+.be4after::before {
+    /* border-bottom: 2px #603601 solid; */
+    position: absolute;
+    width: 20px;
+    left: 70px;
+    bottom: -1px;
+    background: #603601;
+    content: "";
+    height: 4px;
+    z-index: 1;
+}
+
+div.blog-container {
+    display: flex;
+    justify-content: center;
+    width: 800px;
+}
+.blog-card {
+    width: 250px;
+    height: fit-content;
+    margin: 10px;
+    text-align: center;
+    font-size: 24px;
+  }
