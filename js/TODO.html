@@ -1,20 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <title>bobbyhadz.com</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    
   </head>
-  <body class="w-1/2 m-auto">
-    <main>
-      <h1 class="text-cyan-300 text-6xl mt-10">MY FIRST TODO JS</h1>
-    <input type="text" placeholder="write your todo here" name="input" class="border-cyan-400 border-4 rounded-full p-3 w-96 mt-12" id="input">
-    <p id="addTask" on></p>
-    <p>Left click to toggle todo</p>
-    <p>Right click to delete todo</p>
-    <input type="button" onclick="{console.log('test');}">
-    </main>
-    <script src="script.js"></script>
+
+  <body>
+    <input
+      type="text"
+      id="userVal"
+      name="userVal"
+      style="
+        width: 600px;
+        margin-top: 150px;
+        background-color: aquamarine;
+        border: 2px;
+        border-color: black;
+        padding: 3px;
+        height: 50px;
+      "
+      placeholder="Write something you need to do"
+    />
+    <ol
+      id="addList"
+      style="
+        background-color: aquamarine;
+        width: fit-content;
+        height: max-content;
+        margin: auto;
+        font-weight: bold;
+        font-size: 30px;
+        margin-top: 20px
+      "
+    >
+      <li>Do something useful then sleep</li>
+      <li>Afterall, Repeat</li>
+    </ol>
+
+    <button id="btn" type="submit" style="display: block;">Submit</button>
   </body>
+  <script src="script.js"></script>
 </html>
