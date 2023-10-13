@@ -243,6 +243,7 @@ section-menu h1 {
     padding-bottom: 20px;
 }
 
+
 .be4after::after {
     /* border-bottom: 2px #603601 solid; */
     position: absolute;
@@ -320,12 +321,11 @@ section-menu h1 {
 section-products {
     width: 800px;
     display: grid;
+    align-items: center;
     place-items: center;
 }
 
 section-products h1 {
-    width: 800px;
-    align-items: center;
     position: relative;
     padding: 20px 0 10px 0; 
 }
