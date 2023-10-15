@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./coffeeshop.css">
+    <link rel="stylesheet" href="./css/coffeeshop.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 </head>
@@ -14,18 +14,18 @@
     <div id="icoffeeshop">
         <nav>
             <a href="#">
-                <h1><img src="/svg/Logo 1.svg" alt="">iCoffee Shop</h1>
+                <h1><img src="./svg/Logo 1.svg" alt="">iCoffee Shop</h1>
             </a>
             <ul>
                 <li>Home</li>
-                <li>About <img src="/svg/Symbol.svg" alt=""></li>
-                <li>Blog<img src="/svg/Symbol.svg" alt=""></li>
-                <li>Shop<img src="/svg/Symbol.svg" alt=""></li>
+                <li>About <img src="./svg/Symbol.svg" alt=""></li>
+                <li>Blog<img src="./svg/Symbol.svg" alt=""></li>
+                <li>Shop<img src="./svg/Symbol.svg" alt=""></li>
                 <li>Contact</li>
             </ul>
             <div>
-                <a href="#"><img src="/svg/NavLogoo.svg" alt=""></a>
-                <a href="#"><img src="/svg/Logoo.svg" alt=""></a>
+                <a href="#"><img src="./svg/NavLogoo.svg" alt=""></a>
+                <a href="#"><img src="./svg/Logoo.svg" alt=""></a>
             </div>
         </nav>
         <header>
@@ -39,7 +39,7 @@
         <section-about>
             <h1 class="be4after">About us</h1>
             <div class="aboutus">
-                <img src="/img/About-Image-container.jpg" alt="" width="320px" height="260px">
+                <img src="./img/About-Image-container.jpg" alt="" width="320px" height="260px">
                 <div class="text-container1">
                     <h3>Coffee the way it was meant to be.</h2>
                         <h4>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eum voluptatibus dolores
@@ -65,32 +65,32 @@
                 <div class="swiper-wrapper">
                     <!-- Slides -->
                     <div class="swiper-slide">
-                        <img src="/img/Service-1 1.jpg" alt="" width="180px">
+                        <img src="./img/Service-1 1.jpg" alt="" width="180px">
                         <h3>Selected Coffee Beans</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                     </div>
                     <div class="swiper-slide">
-                        <img src="/img/Service-2 1.jpg" alt="" width="180px">
+                        <img src="./img/Service-2 1.jpg" alt="" width="180px">
                         <h3>Selected Coffee Beans</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                     </div>
                     <div class="swiper-slide">
-                        <img src="/img/Service-3 1.jpg" alt="" width="180px">
+                        <img src="./img/Service-3 1.jpg" alt="" width="180px">
                         <h3>Selected Coffee Beans</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                     </div>
                     <div class="swiper-slide">
-                        <img src="/img/Service-4 1.jpg" alt="" width="180px">
+                        <img src="./img/Service-4 1.jpg" alt="" width="180px">
                         <h3>Selected Coffee Beans</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                     </div>
                     <div class="swiper-slide">
-                        <img src="/img/Service-5.jpg.jpg" alt="" width="180px">
+                        <img src="./img/Service-5.jpg.jpg" alt="" width="180px">
                         <h3>Selected Coffee Beans</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                     </div>
                     <div class="swiper-slide">
-                        <img src="/img/Service-6.jpg.jpg" alt="" width="180px">
+                        <img src="./img/Service-6.jpg.jpg" alt="" width="180px">
                         <h3>Selected Coffee Beans</h3>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                     </div>
@@ -219,13 +219,26 @@
         <section-products>
             <h1 class="be4after">Our products</h1>
             <div class="products-cards-container">
-                <div class="products-cards">                            
-                   
-                    
+                <div class="products-cards">
                 </div>
             </div>
         </section-products>
+        <section-team>
+            <h1 class="be4after">Our Team</h1>
+            <div class="team-card-container">
+                <div class="team-card">
+                </div>
+            </div>
+        </section-team>
+        <section-blogs>
+            <h1 class="be4after">Our Blogs</h1>
+            <div class="blog-container">
+                <div class="blog-card">
+                </div>
+            </div>
+        </section-blogs>
     </div>
+
 </body>
 <script>
     const swiper = new Swiper('.swiper', {
@@ -243,51 +256,55 @@
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
-
-
     });
 
     const postContainer = document.querySelector('.products-cards-container');
     const productCards = [
-        {   
-            image: "/img/Product-1 1.jpg",
+        {
+            image: "./img/Product-1 1.jpg",
             title: 'Cupcake',
             price: '$12.00',
             priceBefore: '$15'
         },
         {
-            image: "/img/Product-2 1.jpg",
-            title: 'title 2',
+            image: "./img/Product-2 1.jpg",
+            title: 'Cappuchino',
             price: '$12.00',
             priceBefore: '$15'
         },
         {
-            image: "/img/Product-3 1.jpg",
-            title: 'title3',
+            image: "./img/Product-3 1.jpg",
+            title: 'Doughnut',
             price: '$12.00',
             priceBefore: '$15'
         },
         {
-            image: "/img/Product-4 1.jpg",
-            title: 'title3',
+            image: "./img/Product-4 1.jpg",
+            title: 'Latte',
             price: '$12.00',
             priceBefore: '$15'
         },
         {
-            image: "/img/Product-5 1.jpg",
-            title: 'title3',
+            image: "./img/Product-5 1.jpg",
+            title: 'Chocolate cake',
             price: '$12.00',
             priceBefore: '$15'
         },
         {
-            image: "/img/Product-6 1.jpg",
-            title: 'title3',
+            image: "./img/Product-6 1.jpg",
+            title: 'Hot chocolate',
             price: '$12.00',
             priceBefore: '$15'
         },
         {
-            image: "/img/Product-7 1.jpg",
-            title: 'title3',
+            image: "./img/Product-7 1.jpg",
+            title: 'Croissant',
+            price: '$12.00',
+            priceBefore: '$15'
+        },
+        {
+            image: "./img/Product-8 1.jpg",
+            title: 'Green tea',
             price: '$12.00',
             priceBefore: '$15'
         },
@@ -300,24 +317,158 @@
             postElement.innerHTML = `
                                     <img src="${productCard.image}" width="220px" alt="">
                                     <h4>${productCard.title}</h4>
-                                    <img src="/svg/RatingFull.svg" alt="">
-                                    <img src="/svg/RatingFull.svg" alt="">
-                                    <img src="/svg/RatingFull.svg" alt="">
-                                    <img src="/svg/RatingFull.svg" alt="">
-                                    <img src="/svg/RatingHalf.svg" alt=""><br/> <br/>
+                                    <img src="./svg/RatingFull.svg" alt="">
+                                    <img src="./svg/RatingFull.svg" alt="">
+                                    <img src="./svg/RatingFull.svg" alt="">
+                                    <img src="./svg/RatingFull.svg" alt="">
+                                    <img src="./svg/RatingHalf.svg" alt=""><br/> <br/>
                                     <span style="color: #C69B7B;"">${productCard.price}
                                     </span>&nbsp&nbsp&nbsp<span style="text-decoration: line-through">${productCard.priceBefore}</span>
                                         `;
 
             postContainer.appendChild(postElement);
         });
-    }
+    };
     postMethods();
 
-  
+    const teamContainer = document.querySelector('.team-card-container');
+    const teamCards = [
+        {
+            imgFile: "./img/Team-1.jpg.jpg",
+            name: 'Micheal Jordan',
+            position: 'CEO',
+        },
+        {
+            imgFile: "./img/Team-2.jpg",
+            name: 'Amy Winehouse',
+            position: 'Founder',
+        },
+        {
+            imgFile: "./img/Team-3.jpg",
+            name: 'Magic Johnson',
+            position: 'Manager',
+        },
+        {
+            imgFile: "./img/Team-4.jpg.jpg",
+            name: 'Scarlett Johanson',
+            position: 'Manager',
+        },
+    ];
+    const postTeam = () => {
+        teamCards.forEach((teamCard) => {
+            const postTeamElement = document.createElement('div');
+            postTeamElement.classList.add('team-card');
+            postTeamElement.innerHTML = `
+                    <img src="${teamCard.imgFile}" width="250px" alt="">
+                    <h3>${teamCard.name}</h3>
+                    <h4 style="color:#C69B7B">${teamCard.position}</h4>
+                    <img src="./svg/Link.svg" alt="">
+                    <img src="./svg/Link-1.svg" alt="">
+                    <img src="./svg/Link-2.svg" alt="">
+                    <img src="./svg/Link-3.svg" alt="">
+        `;
+            teamContainer.appendChild(postTeamElement);
+        })
+    }
+    postTeam();
+    const postContainer = document.querySelector('.products-cards-container');
+    const productCards = [
+        {
+            image: "./img/Product-1 1.jpg",
+            title: 'Cupcake',
+            price: '$12.00',
+            priceBefore: '$15'
+        },
+        {
+            image: "./img/Product-2 1.jpg",
+            title: 'Cappuchino',
+            price: '$12.00',
+            priceBefore: '$15'
+        },
+        {
+            image: "./img/Product-3 1.jpg",
+            title: 'Doughnut',
+            price: '$12.00',
+            priceBefore: '$15'
+        },
+        {
+            image: "./img/Product-4 1.jpg",
+            title: 'Latte',
+            price: '$12.00',
+            priceBefore: '$15'
+        },
+        {
+            image: "./img/Product-5 1.jpg",
+            title: 'Chocolate cake',
+            price: '$12.00',
+            priceBefore: '$15'
+        },
+        {
+            image: "./img/Product-6 1.jpg",
+            title: 'Hot chocolate',
+            price: '$12.00',
+            priceBefore: '$15'
+        },
+        {
+            image: "./img/Product-7 1.jpg",
+            title: 'Croissant',
+            price: '$12.00',
+            priceBefore: '$15'
+        },
+        {
+            image: "./img/Product-8 1.jpg",
+            title: 'Green tea',
+            price: '$12.00',
+            priceBefore: '$15'
+        },
+    ];
+
+    const postMethods = () => {
+        productCards.forEach((productCard) => {
+            const postElement = document.createElement('div');
+            postElement.classList.add('product-card');
+            postElement.innerHTML = `
+                                    <img src="${productCard.image}" width="220px" alt="">
+                                    <h4>${productCard.title}</h4>
+                                    <img src="./svg/RatingFull.svg" alt="">
+                                    <img src="./svg/RatingFull.svg" alt="">
+                                    <img src="./svg/RatingFull.svg" alt="">
+                                    <img src="./svg/RatingFull.svg" alt="">
+                                    <img src="./svg/RatingHalf.svg" alt=""><br/> <br/>
+                                    <span style="color: #C69B7B;"">${productCard.price}
+                                    </span>&nbsp&nbsp&nbsp<span style="text-decoration: line-through">${productCard.priceBefore}</span>
+                                        `;
+
+            postContainer.appendChild(postElement);
+        });
+    };
+    postMethods();
+
+    const blogContainer = document.querySelector('.blog-container');
+    const blogCards = [
+        {
+            
+        },
+    ];
+    const postBlogs = () => {
+        blogCards.forEach((blogCard) => {
+            const postBlog = document.createElement('div');
+            postBlog.classList.add('team-card');
+            postBlog.innerHTML = `
+                    <img src="${blogCard.imgFile}" width="250px" alt="">
+                    <h3>${blogCard.name}</h3>
+                    <h4 style="color:#C69B7B">${blogCard.position}</h4>
+                    <img src="./svg/Link.svg" alt="">
+                    <img src="./svg/Link-1.svg" alt="">
+                    <img src="./svg/Link-2.svg" alt="">
+                    <img src="./svg/Link-3.svg" alt="">
+        `;
+            blogContainer.appendChild(postBlog);
+        })
+    }
+    postBlogs();
 
 
-                        
 </script>
 
 
