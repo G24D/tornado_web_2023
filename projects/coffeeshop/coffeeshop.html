@@ -226,17 +226,104 @@
         <section-team>
             <h1 class="be4after">Our Team</h1>
             <div class="team-card-container">
-                <div class="team-card">
-                </div>
             </div>
         </section-team>
         <section-blogs>
             <h1 class="be4after">Our Blogs</h1>
             <div class="blog-container">
-                <div class="blog-card">
-                </div>
             </div>
         </section-blogs>
+        <section-form>
+            <div>
+                <h3>Get in touch</h3>
+                <form action="">
+                    <input type="text" id="name" name="username" placeholder="name">
+                    <input type="text" id="email" name="email" placeholder="email">
+                    <input type="text" id="subject" name="subject" placeholder="subject">
+                    <input type="text" id="message" name="message" placeholder="message">
+                </form>
+                <button class="btn">Submit</button>
+            </div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60535.53535191943!2d106.8851154246413!3d47.89153062344469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5d96924615351231%3A0xf96457617c660ca5!2sLux%20Club!5e0!3m2!1sen!2smn!4v1697388637045!5m2!1sen!2smn"
+                width="380" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </section-form>
+        <section-contact>
+            <div class="contact">
+                <div class="contactlist">
+                    <img src="./svg/Location1.svg" alt="">
+                    <h5>Холбоо барих</h5>
+                    <p>+976-99112233</p>
+                    <p>+976-88112233</p>
+                </div>
+                <div class="contactlist">
+                    <img src="./svg/Location2.svg" alt="">
+                    <h5>Цагийн хуваарь</h5>
+                    <p>Да-Ба: 8.00 - 18.00</p>
+                    <p>Бя-Ня: 10.00 - 20.00</p>
+                </div>
+                <div class="contactlist">
+                    <img src="./svg/Location3.svg" alt="">
+                    <h5>Email</h5>
+                    <p>icode@cafe.com</p>
+                    <p>info@cafe.com</p>
+                </div>
+                <div class="contactlist">
+                    <img src="./svg/Location4.svg" alt="">
+                    <h5>Хаяг</h5>
+                    <p>MN Tower, Chingeltei</p>
+                    <p>Ulaanbaatar, Mongolia</p>
+                </div>
+
+            </div   >
+        </section-contact>
+        <footer>
+            <div class="footer1">
+                <h4>iCoffee shop</h4>
+
+                <p>
+                    Манай кофе шопд бид зөвхөн кофегоор үйлчилдэггүй. Бидний зорилго
+                    бол зүгээр л кофегоо бэлтгэх биш, харин таны энэ өдрийн мүүдийг
+                    тогтоох юм. Бидний уриа бол кофе нь зүгээр л нэг уух зүйл биш - энэ бол
+                    амьдралын хэв маяг юм. Таныг бидэнтэй нэгдэж, төгс урлагийн ур
+                    чадвар, баяр баясгаланг мэдрэхийг урьж байна.
+                </p>
+                <img src="./svg/Link.svg" alt="">
+                <img src="./svg/Link-1.svg" alt="">
+                <img src="./svg/Link-2.svg" alt="">
+                <img src="./svg/Link-3.svg" alt="">
+            </div>
+            <div class="quicklinks">
+                <p>Quick Links</p>
+                
+                <div class="quicklinks2">
+                    <div>
+                        <p><img src="./svg/arrow.svg" alt="">home</p>
+                        <p><img src="./svg/arrow.svg" alt="">about</p>
+                        <p><img src="./svg/arrow.svg" alt="">team</p>
+                        <p><img src="./svg/arrow.svg" alt="">products</p>
+                        <p><img src="./svg/arrow.svg" alt="">FAQs</p>
+                        <p><img src="./svg/arrow.svg" alt="">menu</p>
+                    </div>
+                    <div>
+                        <p><img src="./svg/arrow.svg" alt="">gallery</p>
+                        <p><img src="./svg/arrow.svg" alt="">reservation</p>
+                        <p><img src="./svg/arrow.svg" alt="">blog</p>
+                        <p><img src="./svg/arrow.svg" alt="">shop</p>
+                        <p><img src="./svg/arrow.svg" alt="">contact</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <p><img src="./svg/call.svg" alt="">&nbsp;  +976-111-222</p>
+                <p><img src="./svg/call.svg" alt=""> &nbsp; +976-123-456</p>
+                <p><img src="./svg/mail.svg" alt=""> &nbsp; icode@cafe.com</p>
+                <p><img src="./svg/loc.svg" alt=""> &nbsp; Ulaanbaatar, Mongolia</p>
+            </div>
+            <h1>Developed by <a href="#">iCode</a> | &#169; 2023 iCoffee Shop | All rights reserved.</h1>
+        </footer>
     </div>
 
 </body>
@@ -309,7 +396,6 @@
             priceBefore: '$15'
         },
     ];
-
     const postMethods = () => {
         productCards.forEach((productCard) => {
             const postElement = document.createElement('div');
@@ -371,104 +457,56 @@
         })
     }
     postTeam();
-    const postContainer = document.querySelector('.products-cards-container');
-    const productCards = [
-        {
-            image: "./img/Product-1 1.jpg",
-            title: 'Cupcake',
-            price: '$12.00',
-            priceBefore: '$15'
-        },
-        {
-            image: "./img/Product-2 1.jpg",
-            title: 'Cappuchino',
-            price: '$12.00',
-            priceBefore: '$15'
-        },
-        {
-            image: "./img/Product-3 1.jpg",
-            title: 'Doughnut',
-            price: '$12.00',
-            priceBefore: '$15'
-        },
-        {
-            image: "./img/Product-4 1.jpg",
-            title: 'Latte',
-            price: '$12.00',
-            priceBefore: '$15'
-        },
-        {
-            image: "./img/Product-5 1.jpg",
-            title: 'Chocolate cake',
-            price: '$12.00',
-            priceBefore: '$15'
-        },
-        {
-            image: "./img/Product-6 1.jpg",
-            title: 'Hot chocolate',
-            price: '$12.00',
-            priceBefore: '$15'
-        },
-        {
-            image: "./img/Product-7 1.jpg",
-            title: 'Croissant',
-            price: '$12.00',
-            priceBefore: '$15'
-        },
-        {
-            image: "./img/Product-8 1.jpg",
-            title: 'Green tea',
-            price: '$12.00',
-            priceBefore: '$15'
-        },
-    ];
-
-    const postMethods = () => {
-        productCards.forEach((productCard) => {
-            const postElement = document.createElement('div');
-            postElement.classList.add('product-card');
-            postElement.innerHTML = `
-                                    <img src="${productCard.image}" width="220px" alt="">
-                                    <h4>${productCard.title}</h4>
-                                    <img src="./svg/RatingFull.svg" alt="">
-                                    <img src="./svg/RatingFull.svg" alt="">
-                                    <img src="./svg/RatingFull.svg" alt="">
-                                    <img src="./svg/RatingFull.svg" alt="">
-                                    <img src="./svg/RatingHalf.svg" alt=""><br/> <br/>
-                                    <span style="color: #C69B7B;"">${productCard.price}
-                                    </span>&nbsp&nbsp&nbsp<span style="text-decoration: line-through">${productCard.priceBefore}</span>
-                                        `;
-
-            postContainer.appendChild(postElement);
-        });
-    };
-    postMethods();
 
     const blogContainer = document.querySelector('.blog-container');
     const blogCards = [
         {
-            
+            imgFile: "./img/Blog-4.jpg",
+            calendar: '7<br/>jul',
+            button: '',
+            createdBy: 'by admin',
+            head: '',
+            title: 'How to brew coffee the right <br/>way',
+            info: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+        },
+        {
+            imgFile: "./img/Blog-5.jpg",
+            calendar: '7<br/>jul',
+            button: '',
+            createdBy: 'by admin',
+            head: '',
+            title: '5 things to remember when making a latte',
+            info: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+        },
+        {
+            imgFile: "./img/Blog-6.jpg",
+            calendar: '7<br/>jul',
+            button: '',
+            createdBy: 'by admin',
+            head: '',
+            title: 'Top 10 reasons why cold coffee is trending',
+            info: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
         },
     ];
     const postBlogs = () => {
         blogCards.forEach((blogCard) => {
             const postBlog = document.createElement('div');
-            postBlog.classList.add('team-card');
+            postBlog.classList.add('blog-card');
             postBlog.innerHTML = `
-                    <img src="${blogCard.imgFile}" width="250px" alt="">
-                    <h3>${blogCard.name}</h3>
-                    <h4 style="color:#C69B7B">${blogCard.position}</h4>
-                    <img src="./svg/Link.svg" alt="">
-                    <img src="./svg/Link-1.svg" alt="">
-                    <img src="./svg/Link-2.svg" alt="">
-                    <img src="./svg/Link-3.svg" alt="">
-        `;
+                    <img src="${blogCard.imgFile}" width="230px" height="130px" alt="">
+                    <h5>${blogCard.calendar}</h5>
+                    <div style="display: flex; justify-content: space-between; align-items: center; height: 50px">
+                        <button class="btn2">Coffee</button>
+                        <h6>${blogCard.createdBy}</h6>
+                    </div>
+                    <h6>${blogCard.title}</h6>
+                    <p style="font-size: 12px">${blogCard.info}</p>
+                    <button class="btn">read more</button>
+                    `;
             blogContainer.appendChild(postBlog);
         })
     }
     postBlogs();
-
-
 </script>
 
 
