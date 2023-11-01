@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<body>
+	    <h3>Random Number Generator</h3>
+	    <h4>Click the button to generate a random number!</h4>
+	    <button id = rand >Generate Random Number</button>
+	    <p id = num-display></p>
+	    <script>
+	        //write your function here!
+	        let randomNumber = () => {
+            var random = Math.random()*10;
+            var showNum = document.createElement('p');
+            showNum.innerHTML = Math.floor(random);
+            document.body.appendChild(showNum);
+	        }
+
+            document.getElementById('rand').addEventListener('click', randomNumber);
+	    </script>
+	</body>
+</html>
