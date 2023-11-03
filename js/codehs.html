@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<style>
+		    html,body{
+		        display:flex;
+		        flex-wrap: wrap;
+		        height:100%;
+		        width:100%;
+		        padding-left:2%;
+		        padding-right:2%;
+		    }
+		    div{
+		        height:10%;
+		        width:9%;
+		        border: 1px solid black;
+		    }
+		</style>
+	</head>
+	<body>
+		<script>
+		    //add 100 divs to the canvas
+		    for (let i = 0; i < 100; i++) {
+		        var canvas = document.createElement('div');
+		        document.body.appendChild(canvas);
+		    }
+		    
+		    //write function paint 
+		    function paint(event) {
+		        if (getRandomArbitrary(1, 4) == 1) {
+		            event.target.style.backgroundColor = blue;
+		        } 
+		    }
+		    function getRandomArbitrary(min, max) {
+                let val = Math.floor(Math.random() * (max - min) + min);
+                return val;
+            }
+            getRandomArbitrary(1, 4);
+		</script>
+	</body>
+</html>

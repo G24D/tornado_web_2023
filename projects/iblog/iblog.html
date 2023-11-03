@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./css/iblog.css">
 </head>
+
 <body>
     <header>
         <h1>
@@ -21,24 +23,52 @@
     <main>
         <p>pinned post</p>
         <div class="pinned-posts">
-            
+        </div>
+        <p>recent post</p>
+        <div class="recent-posts">
+        </div>
+        <div class="recent-posts1">
+            <h1>Photos from CSSConf and JSConf</h1>
+            <i>By&nbsp&nbsp
+                <a href="#">Reid Burke</a>
+                &nbsp&nbsp
+                <span>under</span>&nbsp&nbsp
+                <button class="btn6">Uncategorized</button> &nbsp&nbsp
+                <img src="./img/pic-3.jpg" alt="" style="width: 60px; border-radius: 50%;">
+            </i>
+            <div class="imagecontainer">
+                <div class="text-inside">
+                    <img src="./img/pic-2.jpg" alt="">
+                    <h4>JSConf Photos</h4>
+                </div>
+                <div class="text-inside">
+                    <img src="./img/pic-2.jpg" alt="">
+                    <h4>CSSConf Photos</h4>
+                </div>
+            </div>
         </div>
         <div class="add-blog">
+            <h1>ADD YOUR BLOG HERE</h1>
             <form action="">
-                <input type="text" id="fname" name="name" placeholder="Write your name here"><br>
+                <input type="text" id="fname" name="name" placeholder="Write your name here">
+                <form action="/action">
+                    <select id="selectblog">
+                        <option id="choosepinned" value="">Pinned Post</option>
+                        <option id="chooserecent" value="">Recent Post</option>
+                    </select>
+                </form>
                 <input type="text" id="title" name="name" placeholder="Write your blog title here"><br>
-                <textarea type="text" id="bloginfo" name="bloginfo" placeholder="Write your blog here" style="height: 200px;">
+                <textarea type="text" id="bloginfo" name="bloginfo" placeholder="Write your blog here"
+                    style="height: 200px;">
                 </textarea>
             </form>
             <button id="btn4blog" class="btn4" type="submit">ADD BLOG</button>
         </div>
-
-        <p>recent post</p>
-
     </main>
     <footer>
         <h1>iBlog page</h1>
     </footer>
 </body>
 <script src="./js/app.js"></script>
+
 </html>

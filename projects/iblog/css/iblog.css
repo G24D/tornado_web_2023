@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
@@ -68,18 +69,33 @@ main p {
     padding-bottom: 10px;
     margin-top: 40px;
 }
+
+div i {
+    display: flex;
+    align-items: center;
+}
+
+a {
+    text-wrap: nowrap;
+}
+
 img {
     border-radius: 50%;
-    position: absolute;
-    right: 20px;
-    top: 20px;
+    justify-self: self-end;
 }
+
+
 .btn1 {
     background-color: green;
     color:white;
     text-transform: uppercase;
 }
 .btn2 {
+    background-color: blue;
+    color:white;
+    text-transform: uppercase;
+}
+.btn3 {
     background-color: red;
     color:white;
     text-transform: uppercase;
@@ -90,13 +106,17 @@ img {
     text-transform: uppercase;
     margin-top: 15px;
 }
-
+.btn6 {
+    background-color: grey;
+    color:white;
+    text-transform: uppercase;
+}
 .add-blog {
     display: block;
     margin: 0 auto;
     width: 1000px;
     position: relative;
-    margin-top: 20px;
+    margin-top: 80px;
 }
 textarea {
     width: 1000px;
@@ -108,3 +128,49 @@ input {
     width: 200px;
     height: 40px;
 }
+
+.recent-posts {
+    display: block;
+    margin: 0 auto;
+    width: 1000px;
+    position: relative;
+}
+
+.recent-posts1 {
+    display: block;
+    margin: 0 auto;
+    width: 1000px;
+    position: relative;
+    margin-top: 100px;
+}
+
+.recent-posts1 img {
+    width: 400px;
+    margin-left: 0;
+    border-radius: 0;
+    position: relative;
+}
+
+.recent-posts1 h4 {
+    position: absolute;
+    bottom: 0;
+    margin-left: 30px;
+    background-color: #7ebbb8;
+    padding: 5px;
+}
+
+.imagecontainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+select {
+    height: 40px;
+    width: 200px;
+    background-color: #d6fffb;
+    transform: ease-in-out;
+    transition: 0.3s;
+}
+
+
