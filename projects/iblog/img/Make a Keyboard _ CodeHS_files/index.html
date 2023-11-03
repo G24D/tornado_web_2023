@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://jntkuofyvj-2083789050-a.codehs.me/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    	<style>
+    	    #textbox{
+                    margin: 10px;
+                    border: 1px solid black;
+                    height: 200px;
+                }
+            #keyboard{
+                    text-align: center;
+                }
+        </style>
+	</head>
+    <body>
+        <div id="keyboard">
+        <button>q</button><button>w</button><button>e</button><button>r</button><button>t</button><button>y</button><button>u</button><button>i</button><button>o</button><button>p</button><button>a</button><button>s</button><button>d</button><button>f</button><button>g</button><button>h</button><button>j</button><button>k</button><button>l</button><button>;</button><button>'</button><button>z</button><button>x</button><button>c</button><button>v</button><button>b</button><button>n</button><button>m</button><button>,</button><button>.</button></div>
+        
+        <div id="textbox">
+        </div>
+    
+    
+    <script>
+var alpha = ['q','w','e','r','t','y','u','i','o','p','a','s',
+  'd','f','g','h','j','k','l',';','\'',
+  'z','x','c','v','b','n','m', ',','.'];
+
+function makeButton(text) {
+  let btn = document.createElement('button');
+  btn.innerHTML = text;
+  return btn;
+}
+
+function makeText(text) {
+  let textNode = document.createTextNode(text);
+  return textNode;
+}
+
+function makeKeyboard() {
+  for (let i = 0; i < alpha.length; i++) {
+    let text = alpha[i];
+    let textbox = document.getElementById('textbox');
+    let btn = makeButton(text);
+    var keyboard = document.getElementById('keyboard');
+    keyboard.appendChild(btn);
+    btn.addEventListener('click', function() {
+      textbox.appendChild(makeText(text));
+    });
+  }
+}
+
+makeKeyboard();
+    </script>
+</body></html>
