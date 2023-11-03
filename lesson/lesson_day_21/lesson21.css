@@ -1,0 +1,30 @@
+#page {
+    width: 700px;
+    height: 1400px;
+    margin: 0 auto;
+    background-color: gainsboro;
+    border: 3px solid gold;
+}
+
+#page h1 {
+    text-align: center;
+    background-color: antiquewhite;
+}
+
+#content1 {
+    width: 300px;
+    height: 300px;
+    border: 2px solid goldenrod;
+    margin: 0 auto;
+
+    
+}
+
+#textbox{
+    margin: 10px;
+    border: 1px solid black;
+    height: 200px;
+}
+#keyboard{
+    text-align: center;
+}

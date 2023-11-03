@@ -1,0 +1,80 @@
+
+<!-- saved from url=(0053)https://codehs.com/editor/2225236/solution/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><noscript>
+            You need to enable JavaScript to see the solution.
+            Your firewall or antivirus may be preventing it.
+            </noscript>
+            <script>
+            var s="=\"EPDUZQF!iunm?=iunm?\n=ifbe?\n!!!!=tuzmf?!!!!\n!!!!$ufyucpy|!!!!!!!!!!!!!!!!!!!!nbshjo;!21qy<!!!!!!!!!!!!!!!!!!!!cpsefs;!2qy!tpmje!cmbdl<!!!!!!!!!!!!!!!!!!!!ifjhiu;!311qy<!!!!!!!!!!!!!!!!~!!!!!!!!!!!!$lfzcpbse|!!!!!!!!!!!!!!!!!!!!ufyu.bmjho;!dfoufs<!!!!!!!!!!!!!!!!~!!!!!!!!=\"..!IIIII!..?=0tuzmf?\n=\"..!LLLL!..?=0ifbe?!!!!=cpez?!!!!!!!!=ejw!je!>!(lfzcpbse(?!!!!!!!!=\"..!ttttt!..?=0ejw?!!!!!!!!!!!!!!!!=ejw!je!>!(ufyucpy(?!!!!!!!!=\"..!xxxxx!..?=0ejw?!!!!=\"..!XXX!..?=0cpez?!!!!=tdsjqu?!!!!!!!!wbs!bmqib!>!\\(r(-(x(-(f(-(s(-(u(-(z(-(v(-(j(-(p(-(q(-(b(-(t(-!!!!!!!!!!!!(e(-(g(-(h(-(i(-(k(-(l(-(m(-(<(-(]((-!!!!!!!!!!!!({(-(y(-(d(-(w(-(c(-(o(-(n(-!(-(-(/(-(Tqbdf(^<!!!!!!!!!!!!!!!!!!!!nblfLfzCpbse)*<!!!!!!!!gvodujpo!nblfCvuupo)mfuufs*!!!!!!!!|!!!!!!!!!!!!wbs!cvuupo!>!epdvnfou/dsfbufFmfnfou)#cvuupo#*<!!!!!!!!!!!!cvuupo/beeFwfouMjtufofs)#dmjdl#-!nblfUfyu*!!!!!!!!!!!!cvuupo/bqqfoe)mfuufs*<!!!!!!!!!!!!epdvnfou/hfuFmfnfouCzJe)(lfzcpbse(*/bqqfoe)cvuupo*<!!!!!!!!~!!!!!!!!!!!!!!!!!!!!!!!!gvodujpo!nblfLfzCpbse)*!!!!!!!!|!!!!!!!!!!!!!!!!!!!!!!!!gps)wbs!j!>!2<!j!=!bmqib/mfohui!,!2<!j,,*!!!!!!!!!!!!|!!!!!!!!!!!!!!!!nblfCvuupo)bmqib\\j!.!2^*<!!!!!!!!!!!!!!!!jg)j!&!21!>>!1*!!!!!!!!!!!!!!!!|!!!!!!!!!!!!!!!!!!!!wbs!mjof!>!epdvnfou/dsfbufFmfnfou)#cs#*<!!!!!!!!!!!!!!!!!!!!epdvnfou/hfuFmfnfouCzJe)(lfzcpbse(*/bqqfoe)mjof*<!!!!!!!!!!!!!!!!~!!!!!!!!!!!!~!!!!!!!!~!!!!!!!!!!!!!!!!gvodujpo!nblfUfyu)*!!!!!!!!|!!!!!!!!!!!!jg)uijt/joofsIUNM!>>!#Tqbdf#*!!!!!!!!!!!!|!!!!!!!!!!!!!!!!epdvnfou/hfuFmfnfouCzJe)(ufyucpy(*/bqqfoe)#!#*<!!!!!!!!!!!!!!!!00bmufsobuf!tpmvujpo!uibu!bmmpxt!gps!nvmujqmf!tqbdft!!!!!!!!!!!!!!!!00epdvnfou/hfuFmfnfouCzJe)(ufyucpy(*/bqqfoe)#]v11B1#*<!!!!!!!!!!!!~!!!!!!!!!!!!fmtf!!!!!!!!!!!!|!!!!!!!!!!!!!!!!epdvnfou/hfuFmfnfouCzJe)(ufyucpy(*/bqqfoe)uijt/joofsIUNM*<!!!!!!!!!!!!~!!!!!!!!~!!!!!!!!!!!!=\"..!GGGG!..?=0tdsjqu?=\"..!vvvv!..?=0iunm?";
+            m=""; for (i=0; i<s.length; i++) {
+                m+=String.fromCharCode(s.charCodeAt(i)-1);
+            } document.write(m);
+            </script>
+
+	
+	    <style>
+    	    #textbox{
+                    margin: 10px;
+                    border: 1px solid black;
+                    height: 200px;
+                }
+            #keyboard{
+                    text-align: center;
+                }
+        <!-- HHHHH --></style>
+	<!-- KKKK --></head>
+    <body>
+        <div id="keyboard">
+        <!-- sssss --><button>q</button><button>w</button><button>e</button><button>r</button><button>t</button><button>y</button><button>u</button><button>i</button><button>o</button><button>p</button><br><button>a</button><button>s</button><button>d</button><button>f</button><button>g</button><button>h</button><button>j</button><button>k</button><button>l</button><button>;</button><br><button>'</button><button>z</button><button>x</button><button>c</button><button>v</button><button>b</button><button>n</button><button>m</button><button>,</button><button>.</button><br><button>Space</button></div>
+        
+        <div id="textbox">
+        <!-- wwwww -->eeeettgg   bbnn    b,nn</div>
+    <!-- WWW -->
+    <script>
+        var alpha = ['q','w','e','r','t','y','u','i','o','p','a','s',
+            'd','f','g','h','j','k','l',';','\'',
+            'z','x','c','v','b','n','m', ',','.','Space'];
+            
+        makeKeyBoard();
+        function makeButton(letter)
+        {
+            var button = document.createElement("button");
+            button.addEventListener("click", makeText)
+            button.append(letter);
+            document.getElementById('keyboard').append(button);
+        }
+        
+        
+        function makeKeyBoard()
+        {
+            
+            for(var i = 1; i < alpha.length + 1; i++)
+            {
+                makeButton(alpha[i - 1]);
+                if(i % 10 == 0)
+                {
+                    var line = document.createElement("br");
+                    document.getElementById('keyboard').append(line);
+                }
+            }
+        }
+        
+        function makeText()
+        {
+            if(this.innerHTML == "Space")
+            {
+                document.getElementById('textbox').append(" ");
+                //alternate solution that allows for multiple spaces
+                //document.getElementById('textbox').append("\u00A0");
+
+            }
+            else
+            {
+                document.getElementById('textbox').append(this.innerHTML);
+            }
+        }
+        
+    <!-- FFFF --></script>
+<!-- uuuu -->
+
+        </body></html>
