@@ -49,7 +49,7 @@ return btn;
 function makeText(text) {
   let textNode = document.createTextNode(text);
   return textNode;
-}
+}q
 
 function makeKeyboard() {
   for (let i = 0; i < alpha.length; i++) {
