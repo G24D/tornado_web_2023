@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div id="page">
+        <div id="playstation">
+            <h1>Playstation 5</h1> <br>
+            <button>BUY NOW</button>
+        </div>
+        <div id="xbox"> 
+            <h1>Xbox series X</h1> <br>
+            <button>BUY NOW</button>
+        </div>
+
+</div>
+<div id="progress">
+<div id="prog">
+            <h1 class="after1">1</h1>
+            <h1 class="after2">2</h1>
+            <h1 class="after3">3</h1>
+            <h1 class="after4">4</h1>
+            
+</div>
+<div class="btns">
+    <button id="prev" class="btn-inactive">PREV</button>
+    <button id="next" class="btn-active">NEXT</button>
+</div>
+</div>
+
+<script>
+        const progs = document.getElementById('prog');
+        const after1Element = document.querySelectorAll('.after1::after');
+        var index = 0;
+        const nxtBtn = document.getElementById('next');
+        const prvBtn = document.getElementById('prev');
+        console.log(after1Element);
+        console.log(progs.children);
+
+        function chooseNext() {
+            index++;
+            progs.children[index].classList.add('active'); 
+            prvBtn.disabled = index === 0;
+            nxtBtn.disabled = index === progs.children.length - 1;
+            if (index === progs.children.length - 1 ) {
+                nxtBtn.classList.remove('btn-active');
+                nxtBtn.classList.add('btn-inactive');
+            } else if (index != 0) {
+                prvBtn.classList.remove('btn-inactive');
+                prvBtn.classList.add('btn-active');
+            }
+            console.log(index);
+        }
+        function removeNext() {
+            index--;
+            progs.children[index + 1].classList.remove('active'); 
+            prvBtn.disabled = index === 0;
+            nxtBtn.disabled = index === progs.children.length - 1;
+            if (index === progs.children.length - 1 ) {
+                nxtBtn.classList.remove('btn-active');
+                nxtBtn.classList.add('btn-inactive');
+            } else if (index != 0) {
+                prvBtn.classList.remove('btn-inactive');
+                prvBtn.classList.add('btn-active');
+            }
+            console.log(index);
+        }
+
+        nxtBtn.addEventListener('click', chooseNext);
+        prvBtn.addEventListener('click', removeNext);
+</script>
+
+
+</body>
+</html>

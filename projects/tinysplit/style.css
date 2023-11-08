@@ -1,0 +1,148 @@
+
+#page {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    height: 600px;
+}
+
+#playstation {
+    width: 70vw;
+    background-image: url(./img/ps5.jpg);
+    background-blend-mode: hue;
+    background-size: cover;
+    text-align: center;
+}
+
+#playstation h1 {
+    color: rgb(223, 222, 231);
+    font-size: 60px;
+    border: 2px solid rgb(31, 8, 167);
+    display: inline-block;
+    padding: 10px;
+    background-color: rgb(96, 142, 235);
+}
+
+button {
+    padding: 10px;
+    background-color: rgb(96, 142, 235);
+    border: white;
+    cursor: pointer;
+    color: rgb(223, 222, 231);
+    font-weight: 900;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 24px;
+    border: 2px solid rgb(31, 8, 167);
+}
+
+button:hover {
+    background-color: rgb(54, 135, 182);
+}
+
+#xbox {
+    width: 30vw;
+    background-image: url(./img/xbox.jpg);
+    background-blend-mode: hue;
+    background-size: cover;
+    align-items: center;
+    text-align: center;
+}
+
+#xbox h1 {
+    color: rgb(223, 222, 231);
+    font-size: 60px;
+    border: 2px solid rgb(31, 8, 167);
+    display: inline-block;
+    padding: 10px;
+    background-color: rgb(96, 142, 235);
+}
+
+#xbox:hover {
+    width: 90vw;
+    transition-duration: 200ms;
+}
+
+#progress div {
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+
+.after1 {
+    border-radius: 50%;
+    border: 8px double blue;
+    font-size: 40px;
+    padding: 24px;
+    position: relative;
+}
+
+.after2 {
+    border-radius: 50%;
+    border: 8px double black;
+    font-size: 40px;
+    padding: 24px;
+    position: relative;
+}
+.after3 {
+    border-radius: 50%;
+    border: 8px double black;
+    font-size: 40px;
+    padding: 24px;
+    position: relative;
+}
+.after4 {
+    border-radius: 50%;
+    border: 8px double black;
+    font-size: 40px;
+    padding: 24px;
+    position: relative;
+}
+
+.after1::after {
+    position: absolute;
+    width: 175px;
+    bottom: 45px;
+    background: black;
+    content: "";
+    height: 6px;
+    z-index: 1;
+    right: -182px;
+}
+
+.after2::after {
+    position: absolute;
+    width: 175px;
+    bottom: 45px;
+    background: black;
+    content: "";
+    height: 6px;
+    z-index: 1;
+    right: -182px;
+}
+
+.after3::after {
+    position: absolute;
+    width: 175px;
+    bottom: 45px;
+    background: black;
+    content: "";
+    height: 6px;
+    z-index: 1;
+    right: -182px;
+}
+
+.btn-inactive {
+    background-color: gray;
+}
+
+.btn-active {
+    background-color: blue;
+}
+
+.active {
+    border-color: blue;
+    
+}
