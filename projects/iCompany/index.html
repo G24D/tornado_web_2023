@@ -21,16 +21,69 @@
         </a>
         <ul class="flex">
             <a><li>Home</li></a>
-            <a><li>About </li></a>
-            <a><img src="./svg/Symbol.png" alt=""></a>
-            <a><li>Links</li></a>
-            <a><img src="./svg/Symbol.png" alt=""></a>
+            <a><li id="dropdownabout" class="aboutnav"><p>About</p> <img src="./svg/Symbol.png" alt="" width="12px" height="8px"></li></a>
+            <a><li id="dropdownlinks" class="aboutnav"><p>Links</p><img src="./svg/Symbol.png" alt="" width="12px" height="8px"></li></a>
             <a><li>Contact</li></a>
         </ul>
         <div>
-            <a href="#"><img src="./svg/Link.svg" alt=""></a>
+            <a href="#"><img src="./svg/Link.svg" alt="" id="inputform"></a>
         </div>
     </nav>
+    <div id="hiddendropdown" class="hiddendropdown">
+        <ol>
+            <a><li>A</li></a>
+            <a><li>B</li></a>
+            <a><li>C</li></a>
+            <a><li>D</li></a>
+        </ol>
+    </div>
+    <div id="hiddendropdownlink" class="hiddendropdown1">
+        <ol>
+            <a><li>LINKS A</li></a>
+            <a><li>LINKS B</li></a>
+            <a><li>LINKS C</li></a>
+            <a><li>LINKS D</li></a>
+        </ol>
+    </div>
+    <form action="submit_form.php" method="post" id="userinput" class="">
+        <div class="fillfrom">
+            <h1>Fill this form field</h1>
+            <img src="./svg/x-symbol-svgrepo-com.svg" width="20px" alt="" id="closeinput">
+        </div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        
+        <label for="comments">Comments:</label>
+        <textarea id="comments" name="comments" rows="4" cols="50"></textarea>
+        
+        <p>Gender:</p>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+        
+        <p>Interests:</p>
+        <input type="checkbox" id="interest1" name="interests[]" value="music">
+        <label for="interest1">Music</label>
+        <input type="checkbox" id="interest2" name="interests[]" value="sports">
+        <label for="interest2">Sports</label>
+        
+        <p>Country:</p>
+        <select name="country">
+            <option value="usa">United States</option>
+            <option value="canada">Canada</option>
+            <option value="uk">United Kingdom</option>
+            <option value="australia">Australia</option>
+        </select>
+
+        <input type="submit" value="Submit">
+    </form>
     <div>
         <h1>You've come to the right place!</h1>
         <h4>Quality | Trust | Flexibility</h4>
@@ -106,11 +159,11 @@
     </div>
     <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60535.53535191943!2d106.8851154246413!3d47.89153062344469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5d96924615351231%3A0xf96457617c660ca5!2sLux%20Club!5e0!3m2!1sen!2smn!4v1697388637045!5m2!1sen!2smn"
-        width="380" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+        width="643px" height="300" style="border:0;" allowfullscreen="" loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 </section>
-<section-contact>
+<section class="contactus">
     <div class="contact">
         <div class="contactlist">
             <img src="./svg/Location1.svg" alt="">
@@ -137,50 +190,49 @@
             <p>Ulaanbaatar, Mongolia</p>
         </div>
 
-    </div   >
-</section-contact>
+    </div>
+</section>
 <footer>
     <div class="footer1">
         <h4>iCoffee shop</h4>
 
         <p>
-            Манай кофе шопд бид зөвхөн кофегоор үйлчилдэггүй. Бидний зорилго
-            бол зүгээр л кофегоо бэлтгэх биш, харин таны энэ өдрийн мүүдийг
-            тогтоох юм. Бидний уриа бол кофе нь зүгээр л нэг уух зүйл биш - энэ бол
-            амьдралын хэв маяг юм. Таныг бидэнтэй нэгдэж, төгс урлагийн ур
-            чадвар, баяр баясгаланг мэдрэхийг урьж байна.
+            We have proficient experience in managing marketing campaigns and social media marketing of businesses operating in food industry, starting from agricultural products to hospitality.
+
         </p>
-        <img src="./svg/Link.svg" alt="">
-        <img src="./svg/Link-1.svg" alt="">
-        <img src="./svg/Link-2.svg" alt="">
-        <img src="./svg/Link-3.svg" alt="">
+       <div class="svgcontact">
+            <img src="./svg/contact1.svg" alt="">
+            <img src="./svg/contact2.svg" alt="">
+            <img src="./svg/contact3.svg" alt="">
+            <img src="./svg/contact4.svg" alt="">
+       </div>
     </div>
     <div class="quicklinks">
         <p>Quick Links</p>
         
         <div class="quicklinks2">
             <div>
-                <p><img src="./svg/arrow.svg" alt="">home</p>
-                <p><img src="./svg/arrow.svg" alt="">about</p>
-                <p><img src="./svg/arrow.svg" alt="">team</p>
-                <p><img src="./svg/arrow.svg" alt="">products</p>
-                <p><img src="./svg/arrow.svg" alt="">FAQs</p>
-                <p><img src="./svg/arrow.svg" alt="">menu</p>
+                <p>home</p>
+                <p>about</p>
+                <p>team</p>
+                <p>products</p>
+                <p>FAQs</p>
+                <p>menu</p>
             </div>
             <div>
-                <p><img src="./svg/arrow.svg" alt="">gallery</p>
-                <p><img src="./svg/arrow.svg" alt="">reservation</p>
-                <p><img src="./svg/arrow.svg" alt="">blog</p>
-                <p><img src="./svg/arrow.svg" alt="">shop</p>
-                <p><img src="./svg/arrow.svg" alt="">contact</p>
+                <p>gallery</p>
+                <p>reservation</p>
+                <p>blog</p>
+                <p>shop</p>
+                <p>contact</p>
             </div>
         </div>
     </div>
     <div>
-        <p><img src="./svg/call.svg" alt="">&nbsp;  +976-111-222</p>
-        <p><img src="./svg/call.svg" alt=""> &nbsp; +976-123-456</p>
-        <p><img src="./svg/mail.svg" alt=""> &nbsp; icode@cafe.com</p>
-        <p><img src="./svg/loc.svg" alt=""> &nbsp; Ulaanbaatar, Mongolia</p>
+        <p>  +976-111-222</p>
+        <p> +976-123-456</p>
+        <p> icode@cafe.com</p>
+        <p> Ulaanbaatar, Mongolia</p>
     </div>
     <h1>Developed by <a href="#">iCode</a> | &#169; 2023 iCoffee Shop | All rights reserved.</h1>
 </footer>

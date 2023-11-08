@@ -24,7 +24,8 @@ ul {
     list-style-type: none;
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 10px;
+    justify-content: space-around;
 }
 
 a {
@@ -43,9 +44,6 @@ header {
     width: 1430px;
 }
 
-header div {
-    margin-top: 60px;
-}
 
 header div h1 {
     font-size: 45px;
@@ -56,6 +54,10 @@ header div h1 {
     padding: 12px 30px 13px 30px;
     color: white;
     border-radius: 10px;
+}
+
+.button:hover {
+    background-color: #79bbbb;
 }
 
 header  div h5 {
@@ -209,30 +211,30 @@ header  div h5 {
     margin-top: 40px;
 }
 
-section-form {
-    width: 800;
+.form {
+    width: 1430px;
     display: flex;
     gap: 10;
-    justify-content: space-evenly;
+    justify-content: center;
 }    
 
 form {
-    width: 380px;
+    width: 643px;
 }
 input#name {
-    width: 380px;
+    width: 643px;
     height: 40px;
 }
 input#email {
-    width: 380px;
+    width: 643px;
     height: 40px;
 }
 input#subject {
-    width: 380px;
+    width: 643px;
     height: 40px;
 }
 input#message {
-    width: 380px;
+    width: 643px;
     height: 100px;
     margin-bottom: 20px;
 }
@@ -254,47 +256,128 @@ input {
 
 .contact {
     display: flex;
-    justify-content: space-between;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: center;
 }
-.contactlist h5 {
-    margin-top: 4px;
-    margin-bottom: 4px;
-}
-.contactlist p {
-    margin-top: 2px;
-    margin-bottom: 2px;
-}
+
 .contactlist {
-    display: grid;
-    place-items: center;
-    width: 200px;
-} 
+    padding: 40px;
+    width: 321.75px;
+    height: 200px;
+    background-color: rgb(221, 228, 235);
+    text-align: center;
+    align-items: center;
+}  
+
+.contactlist img {
+    margin: 0 auto;
+}
 
 footer { 
-    width: 1430;
+    width: 1430px;
     background-color: #013560;
     display: flex;
     flex-wrap: wrap;
     color: white;
     padding: 20px;
-    justify-content: center;
+    justify-content: space-around;
+
 }
 .quicklinks2{ 
     display: flex;
-    width: 280px;
-    gap: 40px;
+    width: 480px;
+    gap: 60px;
 }
 
 .footer1 {
-    width: 280px;
+    width: 480px;
 }
 footer h1 {
     font-size: 16px;
-    width: 740px;
+    width: 1430px;
     text-align: center;
     border: 2px white;
     border-style: solid none none none;
     padding-top: 10px;
+}
+
+.form {
+    display: flex;
+}
+
+.form h3 {
+    text-align: center;
+}
+
+.svgcontact {
+    display: flex;
+    margin-top: 20px;
+}
+.aboutnav {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    position: relative;
+}
+
+.aboutnav img {
+    height: 8px;
+    width: 12px;
+}
+
+.hiddendropdown {
+    background-color: #43759d;
+    width: 200px;
+    position: absolute;
+    left: 900px;
+    transition: opacity 3ms;
+    display: none;
+}
+.hiddendropdown1 {
+    background-color: #43759d;
+    width: 200px;
+    position: absolute;
+    left: 1000px;
+    transition: opacity 3ms;
+    display: none;
+}
+
+#userinput {
+    background-color: #43759d;
+    padding: 20px;
+    
+    border-radius: 20px;
+    color: black;
+    position: absolute;
+    left: 30%;
+    width: 700px;
+    top: 30%;
+    display: none;
+    z-index: 2;
+}
+
+#userinput.show{
+    display: block;
+}
+
+#userinput  h1 { 
+    font-size: 32px;
+}
+#userinput  input { 
+    border-radius: 20px;
+    margin: 8px 4px;
+}
+
+.fillfrom{
+    display: flex;
+    justify-content: space-between;
+}
+.fillfrom img {
+    margin-right: 25px;
+    padding: 2px;
+    cursor: pointer;
+}
+.fillfrom h1 {
+    margin-left: 250px;
 }
