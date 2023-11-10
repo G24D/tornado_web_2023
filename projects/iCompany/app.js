@@ -117,32 +117,31 @@ const swiper = new Swiper('.swiper', {
 
 const dropdown = document.getElementById('dropdownabout');
 const hiddendropdown = document.getElementById('hiddendropdown');
-
-dropdown.addEventListener('mouseover', drop);
-dropdown.addEventListener('mouseout', hide);
-
-function drop() {
-    hiddendropdown.style.display = 'block'
-}
-
-function hide() {
-  hiddendropdown.style.display = 'none'
-}
-
 const dropdownLink = document.getElementById('dropdownlinks');
 const hiddendropdownLink = document.getElementById('hiddendropdownlink');
 
+function drop() {
+  hiddendropdown.style.display = 'block';
+  hiddendropdownLink.style.display = 'none';
 
+}
+
+function hide() {
+  hiddendropdown.style.display = 'none';
+  hiddendropdownLink.style.display = 'none';
+}
 function dropLink() {
-    hiddendropdownLink.style.display = 'block'
+  hiddendropdownLink.style.display = 'block';
+  hiddendropdown.style.display = 'none';
+
 }
 
-function hideLink() {
-  hiddendropdownLink.style.display = 'none'
-}
-
+dropdown.addEventListener('mouseover', drop);
 dropdownLink.addEventListener('mouseover', dropLink);
-dropdownLink.addEventListener('mouseout', hideLink);
+
+
+
+
 
 const userinput = document.getElementById('userinput');
 const inputform = document.getElementById('inputform');
@@ -157,27 +156,27 @@ function toggleInput() {
   } else  {
     userinput.style.display = 'block';
   } 
-} 
-console.log(userinput);
-const closeInput = document.getElementById('closeinput');
 
-closeInput.addEventListener('click', ()=>userinput.classList.remove('show'));
-
-window.addEventListener('click', (e)=>{
-  console.log('outside');
-  e.target == userinput ?  userinput.classList.remove('show') : false
-})
-
-/* 
-function closeOutside(e) {
+  // function closePopupOutside(e) {
+  //   var popup = document.getElementById('userinput'); 
+  //   if (popup && !popup.contains(e.target)) {
+  //     popup.style.display = 'none'; 
+  //   }
+  // }
+  
+ window.addEventListener('click', (e) => {
     var target = e.target;
-    if(target !== userinput) {
-      console.log('OUTSIDE');
-      ;
-    } else {
-      console.log('INSIDE');
+    if(target.id !== userinput) {
+      userinput.style.display = 'none';
+      console.log('console');
     }
-    console.log(target);
-} */
+  });
+} 
+const closeInputBtn = document.getElementById('closeinput');
 
-/* document.body.addEventListener('click', closeOutside); */
+closeInputBtn.addEventListener('click', ()=>userinput.classList.remove('show'));
+
+
+
+
+

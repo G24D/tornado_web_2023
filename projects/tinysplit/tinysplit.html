@@ -31,6 +31,13 @@
     <button id="next" class="btn-active">NEXT</button>
 </div>
 </div>
+<div class="hiddensearch">
+    <h1>Hidden Search Button</h1> <br>  
+    <div class="search" onmouseover="showSearch()">
+        <input id="hiddenbar" type="text" placeholder="Search...">
+        <img src="./img/search.svg" alt="" id="searchBtn" onclick="hideSearch()">
+      </div>
+</div>
 
 <script>
         const progs = document.getElementById('prog');
@@ -72,6 +79,17 @@
 
         nxtBtn.addEventListener('click', chooseNext);
         prvBtn.addEventListener('click', removeNext);
+
+        var hiddenBar = document.getElementById('hiddenbar');
+        var searchDiv = document.getElementsByClassName('.search')
+
+        function showSearch() {
+            hiddenBar.style.display = 'block';
+            }
+
+        function hideSearch() {
+            hiddenBar.style.display = 'none';
+}
 </script>
 
 

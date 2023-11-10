@@ -326,21 +326,48 @@ footer h1 {
     width: 12px;
 }
 
+nav li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+nav ol a {
+    display: block;
+}
+
+nav ol a:hover {
+    background-color: #013560;
+}
+
+#dropdownabout {
+    position: relative;
+
+}
+#dropdownabout:hover .hiddendropdown {
+    display: block;
+}
 .hiddendropdown {
     background-color: #43759d;
-    width: 200px;
+    width: 160px;
     position: absolute;
-    left: 900px;
     transition: opacity 3ms;
+    top: 45px;
+    left: -20px;
     display: none;
+    border-radius: 5px;
+    border: 2px solid #43759d;
 }
+
 .hiddendropdown1 {
     background-color: #43759d;
     width: 200px;
     position: absolute;
-    left: 1000px;
+    left: -20px;
+    top: 45px;
     transition: opacity 3ms;
     display: none;
+    border: 10px solid #43759d;
+    border-radius: 5px;
 }
 
 #userinput {

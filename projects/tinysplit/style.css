@@ -1,4 +1,6 @@
-
+body {
+    height: 9000px;
+}
 #page {
     width: 1200px;
     margin: 0 auto;
@@ -146,3 +148,54 @@ button:hover {
     border-color: blue;
     
 }
+
+.hiddensearch {
+    width: 1200px;
+    margin: 0 auto;
+    justify-content: space-evenly;
+}
+
+.search input {
+    width: 0;
+    align-items: center;
+    border: none;
+    outline: none;
+    transition: 0.8s;
+    background: transparent;
+    font-weight: 500;
+    
+}
+
+.search input::placeholder {
+    color: black;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    gap: 0px;
+    background-color: rgb(211, 112, 73);
+    border: 2px solid white;
+    border-radius: 15px;
+    padding: 10px 20px;
+    box-shadow: 0 5px 15px rgb(4, 3, 20);
+    width: fit-content;
+    height: 30px;
+
+}
+
+.search:hover input {
+    width: 240px;
+} 
+#searchBtn {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+
+#searchBtn:hover  {
+    scale: 1.2;
+}
+
+
+
