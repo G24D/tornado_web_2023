@@ -1,59 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
-<div id="page">
+    <div id="page">
         <div id="playstation">
             <h1>Playstation 5</h1> <br>
             <button>BUY NOW</button>
         </div>
-        <div id="xbox"> 
+        <div id="xbox">
             <h1>Xbox series X</h1> <br>
             <button>BUY NOW</button>
         </div>
 
-</div>
-<div id="progress">
-<div id="prog">
+    </div>
+    <div id="progress">
+        <div id="prog">
             <h1 class="after1">1</h1>
             <h1 class="after2">2</h1>
             <h1 class="after3">3</h1>
             <h1 class="after4">4</h1>
-            
-</div>
-<div class="btns">
-    <button id="prev" class="btn-inactive">PREV</button>
-    <button id="next" class="btn-active">NEXT</button>
-</div>
-</div>
-<div class="hiddensearch">
-    <h1>Hidden Search Button</h1> <br>  
-    <div class="search" onmouseover="showSearch()">
-        <input id="hiddenbar" type="text" placeholder="Search...">
-        <img src="./img/search.svg" alt="" id="searchBtn" onclick="hideSearch()">
-      </div>
-</div>
 
-<script>
+        </div>
+        <div class="btns">
+            <button id="prev" class="btn-inactive">PREV</button>
+            <button id="next" class="btn-active">NEXT</button>
+        </div>
+    </div>
+    <div class="flex1">
+        <div class="hiddensearch">
+            <h1>Hidden Search Button</h1> <br>
+            <div class="search" onmouseover="showSearch()">
+                <input id="hiddenbar" type="text" placeholder="Search...">
+                <img src="./img/search.svg" alt="" id="searchBtn" onclick="hideSearch()">
+            </div>
+        </div>
+
+        <div class="increment">
+            <img src="./img/youtube.svg" width='150px' alt="">
+            <div id="counter"></div>
+            <h1>Youtube Subscribers</h1>
+        </div>
+    </div>
+    <div class="flex2">
+        <div id="faqcollapse">
+            <ul>
+                <li class="question">Why shouln't we trust atoms?
+                <li class="faqanswers">They make up everything</li>
+                </li>
+                <li class="question">Why do you call someone with no body and no nose?
+                <li class="faqanswers">They make up everything</li>
+                </li>
+                <li class="question">What's the object-oriented way to become wealthy?
+                <li class="faqanswers">They make up everything</li>
+                </li>
+                <li class="question">How many tickles does is take to tickle and octopus?
+                <li class="faqanswers">They make up everything</li>
+                </li>
+                <li class="question">What is: 1 + 1?
+                <li class="faqanswers">They make up everything</li>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
         const progs = document.getElementById('prog');
         const after1Element = document.querySelectorAll('.after1::after');
         var index = 0;
         const nxtBtn = document.getElementById('next');
         const prvBtn = document.getElementById('prev');
-        console.log(after1Element);
-        console.log(progs.children);
 
         function chooseNext() {
             index++;
-            progs.children[index].classList.add('active'); 
+            progs.children[index].classList.add('active');
             prvBtn.disabled = index === 0;
             nxtBtn.disabled = index === progs.children.length - 1;
-            if (index === progs.children.length - 1 ) {
+            if (index === progs.children.length - 1) {
                 nxtBtn.classList.remove('btn-active');
                 nxtBtn.classList.add('btn-inactive');
             } else if (index != 0) {
@@ -64,10 +93,10 @@
         }
         function removeNext() {
             index--;
-            progs.children[index + 1].classList.remove('active'); 
+            progs.children[index + 1].classList.remove('active');
             prvBtn.disabled = index === 0;
             nxtBtn.disabled = index === progs.children.length - 1;
-            if (index === progs.children.length - 1 ) {
+            if (index === progs.children.length - 1) {
                 nxtBtn.classList.remove('btn-active');
                 nxtBtn.classList.add('btn-inactive');
             } else if (index != 0) {
@@ -85,13 +114,41 @@
 
         function showSearch() {
             hiddenBar.style.display = 'block';
-            }
+        }
 
         function hideSearch() {
             hiddenBar.style.display = 'none';
-}
-</script>
+        }
+
+        let showNum = document.getElementById('counter');
+        let num = 0;
+        function counter() {
+            var timer = setInterval(function () {
+                num += 100;
+                showNum.textContent = num;
+                if (num >= 5000) {
+                    clearInterval(timer);
+                }
+            }, 20);
+        }
+        counter();
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const questions = document.querySelectorAll('.question');
+
+            for (let i = 0; i < questions.length; i++) {
+                questions[i].addEventListener('click', function () {
+                    const answer = this.nextElementSibling;
+                    answer.style.display = (answer.style.display === 'none' || answer.style.display === '') ? 'block' : 'none';
+                });
+            }
+        });
+
+
+
+    </script>
 
 
 </body>
+
 </html>
