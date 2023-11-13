@@ -26,6 +26,7 @@
             <h1 class="after2">2</h1>
             <h1 class="after3">3</h1>
             <h1 class="after4">4</h1>
+<<<<<<< HEAD
 
         </div>
         <div class="btns">
@@ -147,6 +148,85 @@
 
 
     </script>
+=======
+            
+</div>
+<div class="btns">
+    <button id="prev" class="btn-inactive">PREV</button>
+    <button id="next" class="btn-active">NEXT</button>
+</div>
+</div>
+<div class="flex1">
+    <div class="hiddensearch">
+        <h1>Hidden Search Button</h1> <br>  
+        <div class="search" onmouseover="showSearch()">
+            <input id="hiddenbar" type="text" placeholder="Search...">
+            <img src="./img/search.svg" alt="" id="searchBtn" onclick="hideSearch()">
+          </div>
+    </div>
+    
+    <div class="increment">
+        <img src="./img/youtube.svg.svg" alt="" width="200px">
+        <div id="counter"></div>
+        <h1>Youtube Subscribers</h1>
+    </div>
+</div>
+
+<div class="flex2">
+    
+    <div class="container">
+        <div class="calculator">
+            <form>
+                <div class="display">
+                    <input type="text" name="display">
+                </div>
+                <div>
+                    <input type="button" value="AC" onclick="display.value = ''">
+                    <input type="button" value="DEL" onclick="display.value = display.value.toString().slice(0, -1)">
+                    <input type="button" value="." onclick="display.value += '.'">
+                    <input type="button" value="/" onclick="display.value += '/'">
+                </div>
+                <div>
+                    <input type="button" value="7" onclick="display.value += '7' ">
+                    <input type="button" value="8" onclick="display.value += '8' ">
+                    <input type="button" value="9" onclick="display.value += '9' ">
+                    <input type="button" value="*" onclick="display.value += '*' ">
+                </div>
+                <div>
+                    <input type="button" value="4" onclick="display.value += '4'">
+                    <input type="button" value="5" onclick="display.value += '5'">
+                    <input type="button" value="6" onclick="display.value += '6'">
+                    <input type="button" value="-" onclick="display.value += '-'">
+                </div>
+                <div>
+                    <input type="button" value="1" onclick="display.value += '1'">
+                    <input type="button" value="2" onclick="display.value += '2'">
+                    <input type="button" value="3" onclick="display.value += '3'">
+                    <input type="button" value="+" onclick="display.value += '+'">
+                </div>
+                <div>
+                    <input type="button" value="0" onclick="display.value += '0'">
+                    <input type="button" value="00" onclick="display.value += '00'">
+                    <input type="button" value="=" class="equal" onclick="display.value = eval(display.value)">
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div class="faq">
+        <div class="question" onclick="toggleAnswer(1)">What is Lorem Ipsum?</div>
+        <div class="answer" id="answer1">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+    
+        <div class="question" onclick="toggleAnswer(2)">Why do we use it?</div>
+        <div class="answer" id="answer2">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</div>
+    
+        <!-- Add more questions and answers as needed -->
+      </div>
+</div>
+<script src="app.js">
+        
+</script>
+>>>>>>> ac74527f1f462ac657adaf826b6ed455ffb5f29a
 
 
 </body>
