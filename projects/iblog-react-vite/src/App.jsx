@@ -1,5 +1,7 @@
 import Sidebar from "./Sidebar"
 import Header from "./Header"
+import Cards from "./Cards"
+
 
 function App() {
 
@@ -7,8 +9,11 @@ function App() {
     <div className="flex">
       <Sidebar />
       <Header />
+      <Cards />
+
     </div>
   )
 }
+
 
 export default App
