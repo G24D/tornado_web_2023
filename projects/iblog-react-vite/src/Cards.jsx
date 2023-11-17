@@ -1,45 +1,267 @@
-import React from 'react'
+import React from "react";
 
 const Cards = () => {
-  return  (
-
-    <div>
-    {cards.map((card, index ) => (
-          <div key={index}> 
-                
-              <img src={card.img} alt="" />
-              <h1>{card.title}</h1>
-              <div>{card.title}</div>
+  return (
+    <div className="w-[1091px] mx-10">
+      <div className="flex gap-x-6 m-6 items-center flex-wrap relative">
+        <div className="w-[1000px] flex justify-between my-6">
+          <h1 className="uppercase font-bold text-lg">Lifestyle</h1>
+          <div className="flex items-center gap-4">
+            <p>Бүгд</p>
+            <img src="./img/RightArrow.svg" alt="" />
           </div>
-            
-            ))}
+        </div>
+
+        {lifestyleCards.map((lifestyleCard, index) => (
+          <div
+            key={index}
+            className="h-[300px] flex flex-col justify-between w-[230px]"
+          >
+            <img
+              src={lifestyleCard.img}
+              alt=""
+              className=" rounded-md h-[150px]"
+            />
+            <h1 className="text-lg font-bold">{lifestyleCard.title}</h1>
+            <div className="flex items-center justify-between text-sm text-[#97989F]">
+              <img
+                src={lifestyleCard.avatar}
+                alt=""
+                className="w-7 rounded-full"
+              />
+              <span>{lifestyleCard.name}</span>
+              <span>{lifestyleCard.date}</span>
+            </div>
+            <div className="flex items-center justify-between">
+              <span className="flex items-center justify-between gap-2">
+                <a className="cursor-pointer" onClick={() => {}}>
+                  {" "}
+                  <img src="./img/vector.svg" alt="" />
+                </a>
+                <span>{lifestyleCard.likes}</span>
+              </span>
+              <a href="#">
+                <button className="flex bg-[#2F80ED] text-white font-extrabold items-center gap-3 p-2 rounded-lg">
+                  <img src="./img/F.svg" alt="" className="w-3" />
+                  <h3>Share</h3>
+                </button>
+              </a>
+            </div>
+          </div>
+        ))}
+        <img src="./img/LeftArrow.svg" alt=""  className="p-4 w-16 rounded-full shadow-md bg-gray-100 cursor-pointer absolute left-[-25px] z-10"/>
+        <img src="./img/LeftArrow.svg" alt=""  className="p-4 w-16 rounded-full shadow-md bg-gray-100 cursor-pointer absolute right-[25px] rotate-180 z-10"/>
+
+      </div>
+      <div className="flex gap-x-6 m-6 items-center flex-wrap relative">
+        <div className="w-[1000px] flex justify-between my-6">
+          <h1 className="uppercase font-bold text-lg">Technology</h1>
+          <div className="flex items-center gap-4">
+            <p>Бүгд</p>
+            <img src="./img/RightArrow.svg" alt="" />
+          </div>
+        </div>
+
+        {technologyCards.map((technologyCard, index) => (
+          <div
+            key={index}
+            className="h-[300px] flex flex-col justify-between w-[230px]"
+          >
+            <img
+              src={technologyCard.img}
+              alt=""
+              className=" rounded-md h-[150px]"
+            />
+            <h1 className="text-lg font-bold">{technologyCard.title}</h1>
+            <div className="flex items-center justify-between text-sm text-[#97989F]">
+              <img
+                src={technologyCard.avatar}
+                alt=""
+                className="w-7 rounded-full"
+              />
+              <span>{technologyCard.name}</span>
+              <span>{technologyCard.date}</span>
+            </div>
+            <div className="flex items-center justify-between">
+              <span className="flex items-center justify-between gap-2">
+                <a className="cursor-pointer" onClick={() => {}}>
+                  {" "}
+                  <img src="./img/vector.svg" alt="" />
+                </a>
+                <span>{technologyCard.likes}</span>
+              </span>
+              <a href="#">
+                <button className="flex bg-[#2F80ED] text-white font-extrabold items-center gap-3 p-2 rounded-lg left-[-2]">
+                  <img src="./img/F.svg" alt="" className="w-3" />
+                  <h3>Share</h3>
+                </button>
+              </a>
+            </div>
+          </div>
+        ))}
+        <img src="./img/LeftArrow.svg" alt=""  className="p-4 w-16 rounded-full shadow-md bg-gray-100 cursor-pointer absolute left-[-25px] z-10"/>
+        <img src="./img/LeftArrow.svg" alt=""  className="p-4 w-16 rounded-full shadow-md bg-gray-100 cursor-pointer absolute right-[25px] rotate-180 z-10"/>
+      </div>
+      <div className="flex gap-x-6 m-6 items-center flex-wrap relative">
+        <div className="w-[1000px] flex justify-between my-6">
+          <h1 className="uppercase font-bold text-lg">Health</h1>
+          <div className="flex items-center gap-4">
+            <p>Бүгд</p>
+            <img src="./img/RightArrow.svg" alt="" />
+          </div>
+        </div>
+
+        {healthCards.map((healthCard, index) => (
+          <div
+            key={index}
+            className="h-[300px] flex flex-col justify-between w-[230px]"
+          >
+            <img
+              src={healthCard.img}
+              alt=""
+              className=" rounded-md h-[150px]"
+            />
+            <h1 className="text-lg font-bold">{healthCard.title}</h1>
+            <div className="flex items-center justify-between text-sm text-[#97989F]">
+              <img
+                src={healthCard.avatar}
+                alt=""
+                className="w-7 rounded-full"
+              />
+              <span>{healthCard.name}</span>
+              <span>{healthCard.date}</span>
+            </div>
+            <div className="flex items-center justify-between">
+              <span className="flex items-center justify-between gap-2">
+                <a className="cursor-pointer" onClick={() => {}}>
+                  {" "}
+                  <img src="./img/vector.svg" alt="" />
+                </a>
+                <span>{healthCard.likes}</span>
+              </span>
+              <a href="#">
+                <button className="flex bg-[#2F80ED] text-white font-extrabold items-center gap-3 p-2 rounded-lg">
+                  <img src="./img/F.svg" alt="" className="w-3" />
+                  <h3>Share</h3>
+                </button>
+              </a>
+            </div>
+          </div>
+        ))}
+                <img src="./img/LeftArrow.svg" alt=""  className="p-4 w-16 rounded-full shadow-md bg-gray-100 cursor-pointer absolute left-[-25px] z-10"/>
+        <img src="./img/LeftArrow.svg" alt=""  className="p-4 w-16 rounded-full shadow-md bg-gray-100 cursor-pointer absolute right-[25px] rotate-180 z-10"/>
+
+      </div>
+      <div className="flex justify-center my-10">
+        <button className="px-[20px] py-[12px] border-2 w-[141px] h-[48px] text-[#696A75] rounded-xl col-span-4 place-self-center">
+          Цааш унших
+        </button>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-
-const cards = [
+const lifestyleCards = [
   {
-      img: "./img/beach.jpeg",
-      title: 'asdas',
-      avatar: '',
-      name: 'asdasdsa',
-      date: '',
-      likes: '',
-      svg: '',
-      fbShare: '',
+    img: "./img/beach.jpeg",
+    title: "The Impact of Technology on the Workplace",
+    avatar: "./img/avatar.jpg",
+    name: "Tracey Wilson",
+    date: "Aug 20, 2022",
+    likes: 23,
   },
   {
-      img: '',
-      title: 'gfdgdfgfd',
-      avatar: '',
-      name: 'fdgdfgdfgdfgdf',
-      date: '',
-      likes: '',
-      svg: '',
-      fbShare: '',
+    img: "./img/beach.jpeg",
+    title: "The Impact of Technology on the Workplace",
+    avatar: "./img/avatar.jpg",
+    name: "Tracey Wilson",
+    date: "Aug 20, 2022",
+    likes: 23,
   },
-]
-export default Cards
+  {
+    img: "./img/beach.jpeg",
+    title: "The Impact of Technology on the Workplace",
+    avatar: "./img/avatar.jpg",
+    name: "Tracey Wilson",
+    date: "Aug 20, 2022",
+    likes: 23,
+  },
+  {
+    img: "./img/beach.jpeg",
+    title: "The Impact of Technology on the Workplace",
+    avatar: "./img/avatar.jpg",
+    name: "Tracey Wilson",
+    date: "Aug 20, 2022",
+    likes: 23,
+  },
+];
 
-
+const technologyCards = [
+  {
+    img: "./img/beach.jpeg",
+    title: "The Impact of Technology on the Workplace",
+    avatar: "./img/avatar.jpg",
+    name: "Tracey Wilson",
+    date: "Aug 20, 2022",
+    likes: 23,
+  },
+  {
+    img: "./img/beach.jpeg",
+    title: "The Impact of Technology on the Workplace",
+    avatar: "./img/avatar.jpg",
+    name: "Tracey Wilson",
+    date: "Aug 20, 2022",
+    likes: 23,
+  },
+  {
+    img: "./img/beach.jpeg",
+    title: "The Impact of Technology on the Workplace",
+    avatar: "./img/avatar.jpg",
+    name: "Tracey Wilson",
+    date: "Aug 20, 2022",
+    likes: 23,
+  },
+  {
+    img: "./img/beach.jpeg",
+    title: "The Impact of Technology on the Workplace",
+    avatar: "./img/avatar.jpg",
+    name: "Tracey Wilson",
+    date: "Aug 20, 2022",
+    likes: 23,
+  },
+];
+const healthCards = [
+  {
+    img: "./img/beach.jpeg",
+    title: "The Impact of Technology on the Workplace",
+    avatar: "./img/avatar.jpg",
+    name: "Tracey Wilson",
+    date: "Aug 20, 2022",
+    likes: 23,
+  },
+  {
+    img: "./img/beach.jpeg",
+    title: "The Impact of Technology on the Workplace",
+    avatar: "./img/avatar.jpg",
+    name: "Tracey Wilson",
+    date: "Aug 20, 2022",
+    likes: 23,
+  },
+  {
+    img: "./img/beach.jpeg",
+    title: "The Impact of Technology on the Workplace",
+    avatar: "./img/avatar.jpg",
+    name: "Tracey Wilson",
+    date: "Aug 20, 2022",
+    likes: 23,
+  },
+  {
+    img: "./img/beach.jpeg",
+    title: "The Impact of Technology on the Workplace",
+    avatar: "./img/avatar.jpg",
+    name: "Tracey Wilson",
+    date: "Aug 20, 2022",
+    likes: 23,
+  },
+];
+export default Cards;
