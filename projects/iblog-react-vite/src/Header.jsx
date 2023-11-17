@@ -16,7 +16,7 @@ const Header = () => {
 const  CreateButton = (prop) => {
     
     return (
-        <button onClick={prop.onClick} className="text-[#E86B02] font-semibold px-8 py-3 border-2 border-[#E2E8EE] rounded-[10px] hover:text-white hover:bg-[#E86B02]">{prop.children}</button>
+        <button onClick={prop.onClick} className="text-[#E86B02] font-bold px-8 py-3 border-2 border-[#E2E8EE] rounded-[10px] hover:text-white hover:bg-[#E86B02]">{prop.children}</button>
     )
 }
 export default Header;

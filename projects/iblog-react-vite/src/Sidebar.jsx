@@ -27,7 +27,7 @@ const Sidebar = () => {
       }
     };
   return (
-    <section className="pt-10 pl-12 pr-12  h-[1802px] border-r-2 border-[#E2E8EE] row-span-3">
+    <section className="pt-10 pl-12 pr-12  h-[1700px] border-r-2 border-[#E2E8EE] row-span-3">
       <img src="./img/logo.jpg" alt="" className="w-[92px] h-12 mb-11" />
       <div className="w-[250px]">
         <div>
