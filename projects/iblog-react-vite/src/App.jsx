@@ -1,7 +1,7 @@
-import Sidebar from "./Sidebar"
-import Header from "./Header"
-import Cards from "./Cards"
-import Footer from "./Footer"
+import Sidebar from "./components/Sidebar"
+import Header from "./components/Header"
+import Cards from "./components/Cards"
+import Footer from "./components/Footer"
 
 
 function App() {

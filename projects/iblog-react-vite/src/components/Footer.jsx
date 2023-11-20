@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 const Footer = () => {
   return (
     <div className='flex justify-center gap-20 items-center border-t-2 border-[#E2E8EE]'>
