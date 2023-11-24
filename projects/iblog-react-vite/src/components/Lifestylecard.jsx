@@ -1,6 +1,6 @@
 import React from "react";
 
-const Card = ({ index, lifestyleCard, likes, setLikes }) => {
+const Lifestylecard = ({ index, lifestyleCard, likes, setLikes }) => {
   return (
     <div
       key={index}
@@ -60,4 +60,4 @@ const Card = ({ index, lifestyleCard, likes, setLikes }) => {
   );
 };
 
-export default Card;
+export default Lifestylecard;
