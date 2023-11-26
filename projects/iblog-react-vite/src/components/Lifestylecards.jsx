@@ -1,10 +1,11 @@
 import React from "react";
 
-const Card = ({ index, lifestyleCard, likes, setLikes }) => {
+const Lifestylecards = ({ index, lifestyleCard, likes, setLikes }) => {
   return (
     <div
       key={index}
-      className="h-[320px] flex flex-col w-[230px] rounded-xl shadow-lg cursor-pointer hover:translate-x-1 hover:translate-y-1 group-hover:blur-sm hover:!blur-none"
+      className="h-[320px] flex flex-col w-[230px] rounded-xl shadow-lg cursor-pointer 
+      hover:translate-x-1 hover:translate-y-1 group-hover:blur-sm hover:!blur-none"
     >
       <img src={lifestyleCard.img} alt="" className=" rounded-md h-[150px]" />
       <div className="p-2">
@@ -28,20 +29,19 @@ const Card = ({ index, lifestyleCard, likes, setLikes }) => {
                   setLikes((prevLikes) => {
                     const newLikes = [...prevLikes];
                     if (!e.target.style.backgroundColor || e.target.style.backgroundColor === 'none') {
-                      newLikes[index] = newLikes[index] + 1;
+                      newLikes[0][index] = newLikes[0][index] + 1;
                       e.target.style.backgroundColor = 'red'
-                      return newLikes;
                     } else {
-                      newLikes[index] = newLikes[index] - 1;
+                      newLikes[0][index] = newLikes[0][index] - 1;
                       e.target.style.backgroundColor = '';
-                      return newLikes;
                     }
+                    return newLikes;
                   });
                 }}
             
               />
             </a>
-            <span>{likes[index]}</span>
+            <span>{likes[0][index]}</span>
           </span>
           <a href="https://www.facebook.com/" className="relative">
             <button
@@ -60,4 +60,4 @@ const Card = ({ index, lifestyleCard, likes, setLikes }) => {
   );
 };
 
-export default Card;
+export default Lifestylecards;
