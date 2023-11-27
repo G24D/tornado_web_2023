@@ -1,10 +1,6 @@
 import React from "react";
 
-<<<<<<<< HEAD:projects/iblog-react-vite/src/components/Lifestylecards.jsx
-const Lifestylecards = ({ index, lifestyleCard, likes, setLikes }) => {
-========
 const Lifestylecard = ({ index, lifestyleCard, likes, setLikes }) => {
->>>>>>>> 9549c7e3035475f081906dfd889bb947519e7f1d:projects/iblog-react-vite/src/components/Lifestylecard.jsx
   return (
     <div
       key={index}
@@ -64,8 +60,4 @@ const Lifestylecard = ({ index, lifestyleCard, likes, setLikes }) => {
   );
 };
 
-<<<<<<<< HEAD:projects/iblog-react-vite/src/components/Lifestylecards.jsx
-export default Lifestylecards;
-========
 export default Lifestylecard;
->>>>>>>> 9549c7e3035475f081906dfd889bb947519e7f1d:projects/iblog-react-vite/src/components/Lifestylecard.jsx

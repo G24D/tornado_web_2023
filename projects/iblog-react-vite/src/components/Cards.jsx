@@ -2,6 +2,9 @@ import React from "react";
 import { useState } from "react";
 import Lifestylecards from "./Lifestylecards";
 import Technologycards from "./Technologycards";
+import Lifestylecard from "./Lifestylecard";
+
+
 
 const Cards = () => {
   const [likes, setLikes] = useState([[23, 23, 23, 23], [23, 23, 23, 23]]);
@@ -41,6 +44,7 @@ const Cards = () => {
       date: "Aug 20, 2022",
       likes: likes,
     },
+
   ]);
 
   const technologyCards = [
@@ -112,6 +116,26 @@ const Cards = () => {
     },
   ];
 
+  
+  const lsShower = () => {
+    const arrows = document.querySelectorAll('.arrow');
+    console.log(arrows);
+
+
+    if(lifestyleCards.length > 4) {
+      
+      arrows[0].style.display = 'block';
+      arrows[1].stlye.display = 'block'
+    } else {
+      arrows[0].style.display = 'none';
+      arrows[1].stlye.display = 'none'
+    }
+  }
+
+  window.addEventListener('load', ()=> {
+    lsShower();
+  })
+
   return (
     <div className="w-[1091px] mx-10">
       <div className="m-6 relative">
@@ -137,15 +161,33 @@ const Cards = () => {
             );
           })}
         </div>
+=======
+          <div className="group flex gap-x-6 overflow-hidden w-[1043px]">
+            {lifestyleCards.map((lifestyleCard, index) => {
+              
+              return (
+                <Lifestylecard
+                  key={index}
+                  index={index}
+                  likes={likes}
+                  setLikes={setLikes}
+                  lifestyleCard={lifestyleCard}
+                />
+              );
+            })}
+          </div>
+       
         <img
+          id="arrow"
           src="./img/LeftArrow.svg"
           alt=""
-          className="p-4 w-16 rounded-full shadow-md bg-gray-100 cursor-pointer absolute left-[-45px] top-[160px] z-10"
+          className="p-4 w-16 rounded-full arrow shadow-md bg-gray-100 cursor-pointer absolute left-[-45px] top-[160px] z-10 hidden"
         />
         <img
+          id="arrow"
           src="./img/LeftArrow.svg"
           alt=""
-          className="p-4 w-16 rounded-full shadow-md bg-gray-100 cursor-pointer absolute right-[5px] top-[160px] rotate-180 z-10"
+          className="p-4 w-16 rounded-full arrow shadow-md bg-gray-100 cursor-pointer absolute right-[5px] top-[160px] rotate-180 z-10 hidden"
         />
       </div>
       <div className="m-6 relative">
@@ -169,14 +211,18 @@ const Cards = () => {
           })}
         </div>
         <img
+          id="arrow"
+
           src="./img/LeftArrow.svg"
           alt=""
-          className="p-4 w-16 rounded-full shadow-md bg-gray-100 cursor-pointer absolute left-[-45px] top-[160px] z-10"
+          className="p-4 w-16 rounded-full arrow shadow-md bg-gray-100 cursor-pointer absolute left-[-45px] top-[160px] z-10"
         />
         <img
+          id="arrow"
+
           src="./img/LeftArrow.svg"
           alt=""
-          className="p-4 w-16 rounded-full shadow-md bg-gray-100 cursor-pointer absolute right-[5px] top-[160px] rotate-180 z-10"
+          className="p-4 w-16 rounded-full arrow shadow-md bg-gray-100 cursor-pointer absolute right-[5px] top-[160px] rotate-180 z-10"
         />
       </div>
       <div className="m-6 relative">
@@ -240,14 +286,18 @@ const Cards = () => {
           ))}
         </div>
         <img
+          id="arrow"
+
           src="./img/LeftArrow.svg"
           alt=""
-          className="p-4 w-16 rounded-full shadow-md bg-gray-100 cursor-pointer absolute left-[-45px] top-[160px] z-10"
+          className="p-4 w-16 rounded-full arrow shadow-md bg-gray-100 cursor-pointer absolute left-[-45px] top-[160px] z-10"
         />
         <img
+          id="arrow"
+
           src="./img/LeftArrow.svg"
           alt=""
-          className="p-4 w-16 rounded-full shadow-md bg-gray-100 cursor-pointer absolute right-[5px] top-[160px] rotate-180 z-10"
+          className="p-4 w-16 rounded-full arrow shadow-md bg-gray-100 cursor-pointer absolute right-[5px] top-[160px] rotate-180 z-10"
         />
       </div>
       <div className="flex justify-center mt-16">
