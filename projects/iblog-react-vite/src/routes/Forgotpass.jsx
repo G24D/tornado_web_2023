@@ -11,7 +11,7 @@ const Forgotpass = () => {
   return (
     <div className='w-[1043px] mx-auto h-screen flex flex-col justify-between p-4'>
       <div className='flex items-center justify-between mb-20 border-[#E2E8EE] border-b-2'>
-        <a href="/"><img src="../img/logo.jpg" alt="" className="w-[92px] h-12 cursor-pointer" /></a>
+        <a href="/signup/forgotpass/"><img src="../img/logo.jpg" alt="" className="w-[92px] h-12 cursor-pointer" /></a>
         <Header withBorders={false}/>
       </div>
       <div className='w-[420px] font-bolder mx-auto'>

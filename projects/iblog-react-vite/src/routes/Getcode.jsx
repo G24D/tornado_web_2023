@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer';
 
 const Getcode = () => {
+
+  const [arr, setArr] = useState([]);
+  const handleValue = (e) => {
+    arr.push(e.target.value);
+    console.log(arr);
+  }
 
 
   return (
@@ -19,12 +25,23 @@ const Getcode = () => {
                 <input
                   type="text"
                   name=""
+                  onChange={handleValue}
                   maxLength={1}
                   required
                   placeholder='_'
                   className='w-[50px] h-[50px] bg-[#F5F7F9] py-6 gap-[10px] rounded-[10px] pl-4 mb-6 '
                 />
                 <input
+                  type="text"
+                  onChange={handleValue}
+                  name=""
+                  maxLength={1}
+                  required
+                  placeholder='_'
+                  className='w-[50px] h-[50px] bg-[#F5F7F9] py-6 gap-[10px] rounded-[10px] pl-4 mb-6 '
+                />
+                <input
+                  onChange={handleValue}
                   type="text"
                   name=""
                   maxLength={1}
@@ -34,14 +51,7 @@ const Getcode = () => {
                 />
                 <input
                   type="text"
-                  name=""
-                  maxLength={1}
-                  required
-                  placeholder='_'
-                  className='w-[50px] h-[50px] bg-[#F5F7F9] py-6 gap-[10px] rounded-[10px] pl-4 mb-6 '
-                />
-                <input
-                  type="text"
+                  onChange={handleValue}
                   name=""
                   maxLength={1}
                   required
@@ -49,7 +59,7 @@ const Getcode = () => {
                   className='w-[50px] h-[50px] bg-[#F5F7F9] py-6 gap-[10px] rounded-[10px] pl-4 mb-6 '
                 />
               </label> 
-              <a href='/signup/forgotpass/getcode'><button className='p-2 border-[#E86B02] border-[2px] 
+              <a href='/signup/forgotpass/getcode/yourcode'><button className='p-2 border-[#E86B02] border-[2px] 
               rounded-[10px] bg-[#E86B02] hover:bg-[#efc94a] w-[478px] mb-6 text-white 
               font-bolder h-12'>Үргэлжлүүлэх</button></a>
         </div>

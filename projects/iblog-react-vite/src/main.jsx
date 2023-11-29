@@ -9,10 +9,10 @@ import {
 import Root from "./routes/root";
 
 import ErrorPage from './error-page.jsx';
-import Signup from './routes/SignUp.jsx';
+import Signup from './routes/Signup.jsx';
 import Forgotpass from './routes/Forgotpass.jsx';
 import Getcode from './routes/Getcode.jsx';
-
+import Yourcode from './Yourcode.jsx';
 
 
 
@@ -40,6 +40,11 @@ const router = createBrowserRouter([
   {
     path: "/signup/forgotpass/getcode",
     element: <Getcode />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/signup/forgotpass/getcode/yourcode",
+    element: <Yourcode />,
     errorElement: <ErrorPage />,
   },
 
