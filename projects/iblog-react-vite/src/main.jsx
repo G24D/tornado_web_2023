@@ -10,6 +10,9 @@ import Root from "./routes/root";
 
 import ErrorPage from './error-page.jsx';
 import Signup from './routes/SignUp.jsx';
+import Forgotpass from './routes/Forgotpass.jsx';
+import Getcode from './routes/Getcode.jsx';
+
 
 
 
@@ -19,21 +22,27 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "/contacts/1",
+    path: "",
     element: <Root />,
     errorElement: <ErrorPage />,
-    children: [
-      {
-        path: "contacts/:contactId",
-        element: <Signup />,
-      },
-    ],
+
   },
   {
-    path: "login/signup",
+    path: "/signup",
     element: <Signup />,
     errorElement: <ErrorPage />,
   },
+  {
+    path: "/signup/forgotpass",
+    element: <Forgotpass />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/signup/forgotpass/getcode",
+    element: <Getcode />,
+    errorElement: <ErrorPage />,
+  },
+
 
 ]);
 

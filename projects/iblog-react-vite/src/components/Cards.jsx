@@ -1,13 +1,13 @@
 import React from "react";
 import { useState } from "react";
-import Lifestylecards from "./Lifestylecards";
-import Technologycards from "./Technologycards";
 import Lifestylecard from "./Lifestylecard";
+import Technologycard from "./Technologycard";
+import Healthcard from "./Healthcard";
 
 
 
 const Cards = () => {
-  const [likes, setLikes] = useState([[23, 23, 23, 23], [23, 23, 23, 23]]);
+  const [likes, setLikes] = useState([[23, 23, 23, 23], [23, 23, 23, 23], [23, 23, 23, 23]]);
 
 
 
@@ -47,7 +47,7 @@ const Cards = () => {
 
   ]);
 
-  const technologyCards = [
+  const [technologyCard, setTechnologyCard] = useState([
     {
       img: "./img/beach.jpeg",
       title: "The Impact of Technology on the Workplace",
@@ -80,8 +80,8 @@ const Cards = () => {
       date: "Aug 20, 2022",
       likes: likes,
     },
-  ];
-  const healthCards = [
+  ]);
+  const [healthCards, setHealtCard] = useState([
     {
       img: "./img/beach.jpeg",
       title: "The Impact of Technology on the Workplace",
@@ -114,27 +114,10 @@ const Cards = () => {
       date: "Aug 20, 2022",
       likes: likes,
     },
-  ];
+  ]);
 
   
-  const lsShower = () => {
-    const arrows = document.querySelectorAll('.arrow');
-    console.log(arrows);
 
-
-    if(lifestyleCards.length > 4) {
-      
-      arrows[0].style.display = 'block';
-      arrows[1].stlye.display = 'block'
-    } else {
-      arrows[0].style.display = 'none';
-      arrows[1].stlye.display = 'none'
-    }
-  }
-
-  window.addEventListener('load', ()=> {
-    lsShower();
-  })
 
   return (
     <div className="w-[1091px] mx-10">
@@ -147,21 +130,7 @@ const Cards = () => {
           </div>
         </div>
 
-        <div className="group flex gap-x-6">
-          {lifestyleCards.map((lifestyleCard, index) => {
 
-            return (
-              <Lifestylecards
-                key={index}
-                index={index}
-                likes={likes}
-                setLikes={setLikes}
-                lifestyleCard={lifestyleCard}
-              />
-            );
-          })}
-        </div>
-=======
           <div className="group flex gap-x-6 overflow-hidden w-[1043px]">
             {lifestyleCards.map((lifestyleCard, index) => {
               
@@ -181,13 +150,13 @@ const Cards = () => {
           id="arrow"
           src="./img/LeftArrow.svg"
           alt=""
-          className="p-4 w-16 rounded-full arrow shadow-md bg-gray-100 cursor-pointer absolute left-[-45px] top-[160px] z-10 hidden"
+          className="p-4 w-16 rounded-full arrow shadow-md bg-gray-100 cursor-pointer absolute left-[-45px] top-[160px] z-10"
         />
         <img
           id="arrow"
           src="./img/LeftArrow.svg"
           alt=""
-          className="p-4 w-16 rounded-full arrow shadow-md bg-gray-100 cursor-pointer absolute right-[5px] top-[160px] rotate-180 z-10 hidden"
+          className="p-4 w-16 rounded-full arrow shadow-md bg-gray-100 cursor-pointer absolute right-[5px] top-[160px] rotate-180 z-10"
         />
       </div>
       <div className="m-6 relative">
@@ -200,12 +169,13 @@ const Cards = () => {
         </div>
 
         <div className="group flex gap-6">
-          {technologyCards.map((technologyCard, index) => {
+          {technologyCard.map((technologyCard, index) => {
             return (
-              <Technologycards 
+              <Technologycard 
               key={index} 
               technologyCard={technologyCard} 
               index={index} 
+              likes={likes}
               setLikes={setLikes} />
             );
           })}
@@ -237,53 +207,17 @@ const Cards = () => {
         </div>
 
         <div className="group flex gap-6">
-          {healthCards.map((healthCard, index) => (
-            <div
+          {healthCards.map((healthCard, index) => {
+            return (
+              <Healthcard 
               key={index}
-              className="h-[320px] flex flex-col w-[230px] rounded-xl shadow-lg cursor-pointer hover:translate-x-1 hover:translate-y-1 group-hover:blur-sm hover:!blur-none"
-            >
-              <img
-                src={healthCard.img}
-                alt=""
-                className=" rounded-md h-[150px]"
+              index={index}
+              healthCard={healthCard}
+              likes= {likes}
+              setLikes={setLikes}
               />
-              <div className="p-2">
-                <h1 className="text-lg font-bold">{healthCard.title}</h1>
-                <div className="flex items-center justify-between text-sm text-[#97989F]">
-                  <img
-                    src={healthCard.avatar}
-                    alt=""
-                    className="w-7 rounded-full"
-                  />
-                  <span>{healthCard.name}</span>
-                  <span>{healthCard.date}</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span
-                    id="likesHealth"
-                    className="flex items-center justify-between gap-2"
-                  >
-                    <a className="cursor-pointer" onClick={() => { }}>
-                      {" "}
-                      <img src="./img/vector.svg" alt="" />
-                    </a>
-                    <span>{healthCard.likes}</span>
-                  </span>
-                  <a href="#" className="relative">
-                    <button
-                      className="flex bg-[#2F80ED] text-white font-bold items-center gap-3 p-2 rounded-lg
-                     before:absolute before:left-0 before:top-0 before:-z-1 before:rounded-lg before:h-full before:w-full before:origin-top-left 
-                     before:scale-x-0 before:bg-[#6ad0d9] before:transition-transform before:duration-1000 
-                     before:contents-['*'] hover:font-extrabold before:hover:scale-x-100"
-                    >
-                      <img src="./img/F.svg" alt="" className="w-3 z-10" />
-                      <h3 className="z-10">Share</h3>
-                    </button>
-                  </a>
-                </div>
-              </div>
-            </div>
-          ))}
+            )
+            })}
         </div>
         <img
           id="arrow"

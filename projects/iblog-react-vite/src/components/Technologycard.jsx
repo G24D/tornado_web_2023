@@ -1,23 +1,8 @@
 import React from 'react';
 
-const Technologycards = ({ index, technologyCard, likes, setLikes }) => {
-  const handleLikeClick = (e) => {
-    setLikes((prevLikes) => {
-        const newLikes = [...prevLikes];
-        if (!e.target.style.backgroundColor || e.target.style.backgroundColor === 'none') {
-          newLikes[1][index] = newLikes[1][index] + 1;
-          e.target.style.backgroundColor = 'red'
-        } else {
-          newLikes[1][index] = newLikes[1][index] - 1;
-          e.target.style.backgroundColor = '';
-        }
-        return newLikes;
-    });
-  };
+const Technologycard = ({ index, technologyCard, likes, setLikes }) => {
 
 
-  
-           
 
   return (
     <div key={index} className="h-[320px] flex flex-col w-[230px] rounded-xl shadow-lg cursor-pointer hover:translate-x-1 hover:translate-y-1 group-hover:blur-sm hover:!blur-none">
@@ -32,7 +17,20 @@ const Technologycards = ({ index, technologyCard, likes, setLikes }) => {
         <div className="flex items-center justify-between">
           <span id="likesTech" className="flex items-center justify-between gap-2">
             <a className="cursor-pointer">
-              <img src="./img/vector.svg" alt="" onClick={handleLikeClick} />
+              <img src="./img/vector.svg" alt="" onClick={(e) => {
+                setLikes((prevLikes) => {
+                  const newLikes = [...prevLikes];
+                  console.log(newLikes);
+                  if (!e.target.style.backgroundColor || e.target.style.backgroundColor === 'none') {
+                    newLikes[1][index] = newLikes[1][index] + 1;
+                    e.target.style.backgroundColor = 'red'
+                  } else {
+                    newLikes[1][index] = newLikes[1][index] - 1;
+                    e.target.style.backgroundColor = '';
+                  }
+                  return newLikes;
+                });
+              }} />
             </a>
             <span>{likes[1][index]}</span>
           </span>
@@ -51,4 +49,4 @@ const Technologycards = ({ index, technologyCard, likes, setLikes }) => {
   );
 };
 
-export default Technologycards;
+export default Technologycard;

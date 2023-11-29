@@ -1,6 +1,9 @@
 import React from "react";
 
 const Lifestylecard = ({ index, lifestyleCard, likes, setLikes }) => {
+
+
+
   return (
     <div
       key={index}
