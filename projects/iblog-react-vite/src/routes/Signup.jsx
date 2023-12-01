@@ -26,7 +26,9 @@ const Signup = () => {
 
   const CreateButton = (e) => {
     return (
-      <a href='https://www.messenger.com/'><button className='p-2 border-[#E86B02] border-[2px] rounded-[10px] bg-[#E86B02] hover:bg-[#efc94a] w-[478px] mb-6 text-white font-bolder h-12'>{e.children}</button></a>
+      <a href='https://www.messenger.com/'><button className='p-2 border-[#E86B02] 
+      border-[2px] rounded-[10px] bg-[#E86B02] hover:bg-[#efc94a] w-[478px] mb-6 
+      text-white font-bolder h-12'>{e.children}</button></a>
     )
   }
   
