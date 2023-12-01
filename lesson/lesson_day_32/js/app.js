@@ -60,7 +60,7 @@ addRandomNumber(8);
 async function getUserAndPosts(userId) {
     try {
         const userResponse = await fetch(`{https://jsonplaceholder.typicode.com/users/${userId}}`);
-        const userJson = userResponse.json();
+        const userJson = await userResponse.json();
         console.log(userJson);
     } catch (err) {
         console.error('ERRROR');
