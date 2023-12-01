@@ -9,13 +9,14 @@ const Getcode = () => {
     arr.push(e.target.value);
     console.log(arr);
   }
-
+  const imgUrl = './img/logo.jpg'
 
   return (
     <div className='w-[1043px] mx-auto h-screen flex flex-col justify-between p-4'>
-      <div className='flex items-center justify-between mb-20 border-[#E2e8ee] border-b-2'>
-        <a href="/"><img src='../img/logo.jpg' alt="" className="w-[92px] h-12 cursor-pointer" /></a>
+       <div className='flex items-center justify-between mb-20 border-[#E2E8EE] border-b-2'>
+        <a href="/"><img src="../img/logo.jpg" alt="" className="w-[92px] h-12 cursor-pointer" /></a>
         <Header withBorders={false}/>
+        <img src={imgUrl} alt="" />
       </div>
       <div className='w-[420px] font-bolder mx-auto'>
         <p className='text-[20px] text-[#E86B02] w-[150px] font-bolder'>Нууц үг сэргээх</p> <br />
