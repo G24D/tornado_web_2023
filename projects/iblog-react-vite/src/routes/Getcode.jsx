@@ -11,6 +11,7 @@ const Getcode = () => {
   }
   const imgUrl = './img/logo.jpg'
 
+
   return (
     <div className='w-[1043px] mx-auto h-screen flex flex-col justify-between p-4'>
        <div className='flex items-center justify-between mb-20 border-[#E2E8EE] border-b-2'>
@@ -22,7 +23,7 @@ const Getcode = () => {
         <p className='text-[20px] text-[#E86B02] w-[150px] font-bolder'>Нууц үг сэргээх</p> <br />
         <div>
             <p className='text-[#546371] w-[280px] mx-auto mb-6'>Таны бүртгэлтэй имэйл рүү илгээсэн баталгаажуулах кодыг оруулна уу.</p>
-            <label className='flex gap-10 justify-center'>
+            <label id='listItems' className='flex gap-10 justify-center'>
                 <input
                   type="text"
                   name=""
@@ -67,7 +68,8 @@ const Getcode = () => {
       </div>
       <Footer />
     </div>
-  )
+)
+
 }
 
 export default Getcode
