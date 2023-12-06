@@ -3,7 +3,7 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className="w-[800px] mx-auto text-red-700">
         LESSON 35
       </div>
     </>
