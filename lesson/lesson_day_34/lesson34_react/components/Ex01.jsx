@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 const Ex01 = () => {
     const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(true);
+    
 
     useEffect(() => {
         async function fetchPosts() {
