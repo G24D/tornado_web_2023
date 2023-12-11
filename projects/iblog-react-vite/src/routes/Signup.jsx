@@ -4,7 +4,9 @@ import Footer from '../components/Footer';
 import { FaEyeSlash, FaEye } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { MdOutlineFacebook } from "react-icons/md";
-
+import {useNavigate} from 'react-router-dom';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../firebase';
 
 const Signup = () => {
   const [formData, setFormData] = useState({
@@ -21,12 +23,17 @@ const Signup = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+    const navigate = useNavigate();
+    createUserWithEmailAndPassword( auth, email, password ).then((userCredential) => {
+      console.log(userCredential);
+    }).catch((error)=> {
+      console.log(error);
+    })
   };
 
   const CreateButton = (e) => {
     return (
-      <a href='https://www.messenger.com/'><button className='p-2 border-[#E86B02] 
+      <a><button className='p-2 border-[#E86B02] 
       border-[2px] rounded-[10px] bg-[#E86B02] hover:bg-[#efc94a] w-[478px] mb-6 
       text-white font-bolder h-12'>{e.children}</button></a>
     )
@@ -91,7 +98,7 @@ const Signup = () => {
             after:top-3 after:right-16 after:bg-[#E5E6EB] text-[#E5E6EB] mb-6'>
             <span>эсвэл</span>
           </div>
-          <CreateButton>Бүртгүүлэх</CreateButton>
+          <CreateButton onSubmit={handleSubmit}>Бүртгүүлэх</CreateButton>
 
         </form>
 
