@@ -1,8 +1,10 @@
 import React from 'react';
+import { useState } from 'react';
+import Heart from 'react-heart';
 
 const Technologycard = ({ index, technologyCard, likes, setLikes }) => {
 
-
+  const [active, setActive] = useState(false);
 
   return (
     <div key={index} className="h-[320px] flex flex-col w-[230px] rounded-xl shadow-lg cursor-pointer hover:translate-x-1 hover:translate-y-1 group-hover:blur-sm hover:!blur-none">
@@ -17,20 +19,15 @@ const Technologycard = ({ index, technologyCard, likes, setLikes }) => {
         <div className="flex items-center justify-between">
           <span id="likesTech" className="flex items-center justify-between gap-2">
             <a className="cursor-pointer">
-              <img src="./img/vector.svg" alt="" onClick={(e) => {
+              <div className="w-[28px]" onClick={() => {
                 setLikes((prevLikes) => {
                   const newLikes = [...prevLikes];
-                  console.log(newLikes);
-                  if (!e.target.style.backgroundColor || e.target.style.backgroundColor === 'none') {
-                    newLikes[1][index] = newLikes[1][index] + 1;
-                    e.target.style.backgroundColor = 'red'
-                  } else {
-                    newLikes[1][index] = newLikes[1][index] - 1;
-                    e.target.style.backgroundColor = '';
-                  }
+                  newLikes[1][index] += active ? -1 : 1;
+                  setActive(!active);
                   return newLikes;
                 });
-              }} />
+              }}
+              ><Heart isActive={active} onClick={() => { }} /></div>
             </a>
             <span>{likes[1][index]}</span>
           </span>

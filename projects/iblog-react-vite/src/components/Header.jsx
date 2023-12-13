@@ -1,3 +1,5 @@
+// import searchSvg  from '../img/search.svg';
+import { NavLink } from 'react-router-dom';
 
 const Header = ({ withBorders = true }) => {
     const borderClasses = withBorders
@@ -7,10 +9,10 @@ const Header = ({ withBorders = true }) => {
         <div className={`flex justify-evenly w-[1091px] h-[119px] ${borderClasses} items-center`}>
             <div className="flex w-[572px] h-10 rounded-[20px] border-2 justify-between px-4">
                 <input type="text" placeholder="Хайх" className="border-none outline-none w-full" />
-                <img src="../img/search.svg" alt="" width="25px"/>
+                <img src='../img/search.svg' alt="" width="25px"/>
             </div>
-            <a href="signup"><CreateButton onClick={()=>console.log('Pressed')}>Бүртгүүлэх</CreateButton></a>
-            <a href="login"><CreateButton>Нэвтрэх</CreateButton></a>
+            <NavLink to={'/signup'}><CreateButton onClick={()=>console.log('Pressed')}>Бүртгүүлэх</CreateButton></NavLink>
+            <NavLink to={'/login'}><CreateButton>Нэвтрэх</CreateButton></NavLink>
             
         </div>
      ); 

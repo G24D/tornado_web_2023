@@ -1,13 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer';
 
 const Forgotpass = () => {
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
-      };
+    const [email, setEmail] = useState('')
   return (
     <div className='w-[1043px] mx-auto h-screen flex flex-col justify-between p-4'>
       <div className='flex items-center justify-between mb-20 border-[#E2E8EE] border-b-2'>
@@ -21,8 +18,9 @@ const Forgotpass = () => {
             <label>
                 <input
                   type="text"
-                  name="firstName"
-                  onChange={handleChange}
+                  name="email"
+                  value={email}
+                  onChange={(e)=> setEmail(e.target.value)}
                   required
                   placeholder='example@gmail.com'
                   className='w-[480px] bg-[#F5F7F9] py-6 gap-[10px] rounded-[10px] pl-4 mb-6 '

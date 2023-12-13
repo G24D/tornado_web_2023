@@ -5,39 +5,42 @@ import { FaEyeSlash, FaEye } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { MdOutlineFacebook } from "react-icons/md";
 import {useNavigate} from 'react-router-dom';
-import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase';
 
 const Signup = () => {
-  const [formData, setFormData] = useState({
-    firstName: '',
-    lastName: '',
-    email: '',
-    password: '',
-  });
+  const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
 
-  const handleSubmit = (e) => {
+
+  const handleLogin = (e) => {
     e.preventDefault();
-    const navigate = useNavigate();
-    createUserWithEmailAndPassword( auth, email, password ).then((userCredential) => {
-      console.log(userCredential);
-    }).catch((error)=> {
-      console.log(error);
-    })
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        const user = userCredential.user;
+        console.log(user)
+        if (user) {
+          localStorage.setItem(
+            "authenticated",
+            JSON.stringify({ email: user.email, uid: user.uid })
+          );
+        }
+        navigate(`/contact/user`)
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
-  const CreateButton = (e) => {
-    return (
-      <a><button className='p-2 border-[#E86B02] 
-      border-[2px] rounded-[10px] bg-[#E86B02] hover:bg-[#efc94a] w-[478px] mb-6 
-      text-white font-bolder h-12'>{e.children}</button></a>
-    )
-  }
+  // const CreateButton = (e) => {
+  //   return (
+  //     <a><button className='p-2 border-[#E86B02] 
+  //     border-[2px] rounded-[10px] bg-[#E86B02] hover:bg-[#efc94a] w-[478px] mb-6 
+  //     text-white font-bolder h-12'>{e.children}</button></a>
+  //   )
+  // }
   
 
   const [hidePass, setShowPassword] = useState(true);
@@ -50,13 +53,13 @@ const Signup = () => {
       </div>
       <div className=' flex flex-col justify-around h-[556px] w-[478px] mx-auto mb-10'>
         <h2 className=' text-2xl text-[#E86B02] font-bold mb-6'>Нэвтрэх</h2>
-        <form onSubmit={handleSubmit} className='w-[478px] mx-auto'>
+        <form onSubmit={handleLogin} className='w-[478px] mx-auto'>
           <label>
             <input
               type="text"
               name="firstName"
-              value={formData.firstName}
-              onChange={handleChange}
+              value={email}
+              onChange={(e)=> setEmail(e.target.value)}
               required
               placeholder='И-мэйл эсвэл утасны дугаар'
               className='w-[480px] bg-[#F5F7F9] py-6 gap-[10px] rounded-[10px] pl-4 mb-6 '
@@ -68,8 +71,8 @@ const Signup = () => {
             <input
               type={hidePass ? 'password' : 'text'}
               name="lastName"
-              value={formData.lastName}
-              onChange={handleChange}
+              value={password}
+              onChange={(e)=> setPassword(e.target.value)}
               required
               placeholder='Нууц үг'
               className='w-[460px] bg-[#F5F7F9] pl-4'
@@ -83,7 +86,9 @@ const Signup = () => {
           <br />
           <a href="/signup/forgotpass" className='underline flex justify-end'>Нууц үг мартсан уу?</a>
           <br />
-          <CreateButton>Нэвтрэх</CreateButton>
+          <button onClick={handleLogin} className='p-2 border-[#E86B02] 
+      border-[2px] rounded-[10px] bg-[#E86B02] hover:bg-[#efc94a] w-[478px] mb-6 
+      text-white font-bolder h-12'>Нэвтрэх</button>
           <br />
           <div className='flex  justify-center gap-4 items-center p-2 border-[#E86B02] border-[2px] font-bolder rounded-[10px] bg-white hover:bg-[#efc94a] w-[478px] mb-2 font-bolder h-12'>
             <FcGoogle />
@@ -98,7 +103,9 @@ const Signup = () => {
             after:top-3 after:right-16 after:bg-[#E5E6EB] text-[#E5E6EB] mb-6'>
             <span>эсвэл</span>
           </div>
-          <CreateButton onSubmit={handleSubmit}>Бүртгүүлэх</CreateButton>
+          <button onClick={()=>navigate('/signup/newuser')} className='p-2 border-[#E86B02] 
+      border-[2px] rounded-[10px] bg-[#E86B02] hover:bg-[#efc94a] w-[478px] mb-6 
+      text-white font-bolder h-12'>Бүртгүүлэх</button>
 
         </form>
 

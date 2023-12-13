@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
+import Heart from "react-heart";
 
 const Lifestylecard = ({ index, lifestyleCard, likes, setLikes }) => {
-
+  const [active, setActive] = useState(false);
 
 
   return (
@@ -24,25 +25,15 @@ const Lifestylecard = ({ index, lifestyleCard, likes, setLikes }) => {
             className="flex items-center justify-between gap-2"
           >
             <a className="cursor-pointer">
-              <img
-                src="./img/vector.svg"
-                alt=""
-                onClick={(e) => {
-                  // Use the functional form of setLikes to correctly update the state
-                  setLikes((prevLikes) => {
-                    const newLikes = [...prevLikes];
-                    if (!e.target.style.backgroundColor || e.target.style.backgroundColor === 'none') {
-                      newLikes[0][index] = newLikes[0][index] + 1;
-                      e.target.style.backgroundColor = 'red'
-                    } else {
-                      newLikes[0][index] = newLikes[0][index] - 1;
-                      e.target.style.backgroundColor = '';
-                    }
-                    return newLikes;
-                  });
-                }}
-            
-              />
+              <div className="w-[28px]" onClick={() => {
+                setLikes((prevLikes) => {
+                  const newLikes = [...prevLikes];
+                  newLikes[0][index] += active ? -1 : 1;
+                  setActive(!active);
+                  return newLikes;
+                });
+              }}
+              ><Heart isActive={active} onClick={() => { }} /></div>
             </a>
             <span>{likes[0][index]}</span>
           </span>

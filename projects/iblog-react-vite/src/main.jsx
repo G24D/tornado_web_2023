@@ -6,13 +6,15 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Root from "./routes/root";
 
 import ErrorPage from './error-page.jsx';
 import Signup from './routes/Signup.jsx';
 import Forgotpass from './routes/Forgotpass.jsx';
 import Getcode from './routes/Getcode.jsx';
-import Yourcode from './Yourcode.jsx';
+import Yourcode from './routes/Yourcode.jsx';
+import SignupNewuser from './routes/SignupNewuser.jsx';
+import Confirmed from './routes/Confirmed.jsx';
+import Userprofile from './routes/Userprofile.jsx';
 
 
 
@@ -20,13 +22,10 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
-  },
-  {
-    path: "",
-    element: <Root />,
     errorElement: <ErrorPage />,
 
   },
+
   {
     path: "/signup",
     element: <Signup />,
@@ -45,6 +44,27 @@ const router = createBrowserRouter([
   {
     path: "/signup/forgotpass/getcode/yourcode",
     element: <Yourcode />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/signup/newuser",
+    element: <SignupNewuser />,
+    errorElement: <ErrorPage />,
+  },
+  
+  {
+    path: "/signup/newuser/confirmed",
+    element: <Confirmed />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: `/signin/user`,
+    element: <Confirmed />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: `/contact/user`,
+    element: <Userprofile />,
     errorElement: <ErrorPage />,
   },
 
